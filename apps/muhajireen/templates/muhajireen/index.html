@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Al Muhajireen</title>
+        <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+        <meta name="description" content="Church - HTML Template" />
+        <meta name="author" content="wp-organic" />
+        <meta name="MobileOptimized" content="320" />
+        {% load staticfiles %}
+        <!-- favicon-icon -->
+        <link rel="icon" type="image/icon" href="{% static 'images/favicon/favicon.ico' %}">
+        <!-- bootstrap css -->
+        <link href="{% static 'muhajireen/css/bootstrap.min.css' %}" rel="stylesheet" type="text/css"/>
+        <!-- fontawesome css -->
+        <link href="{% static 'muhajireen/css/font-awesome.min.css' %}" rel="stylesheet" type="text/css"/>
+        <!-- flat icons css -->
+        <link href="{% static 'muhajireen/css/flaticon.css' %}" rel="stylesheet" type="text/css"/>
+        <!-- google font -->
+        <link href="https://fonts.googleapis.com/css?family=Playfair+Display:400,400i,700,900|Source+Sans+Pro:300,400,600,700" rel="stylesheet">
+        <!-- menu css -->
+        <link href="{% static 'muhajireen/css/menumaker.css' %}" rel="stylesheet" type="text/css"/>
+        <!-- owl carousel css -->
+        <link href="{% static 'muhajireen/css/owl.carousel.css' %}" rel="stylesheet" type="text/css"/>
+        <!-- magnify popup css -->
+        <link href="{% static 'muhajireen/css/magnific-popup.css' %}" rel="stylesheet" type="text/css"/>
+        <!-- datepicker css -->
+        <link href="{% static 'muhajireen/css/datepicker.css' %}" rel="stylesheet" type="text/css"/>
+        <!-- custom css -->
+        <link href="{% static 'muhajireen/css/style.css' %}" rel="stylesheet"/>
+
+    </head>
+    <body>
+
+        <!--  navigation -->
+          <div class="nav-bar navbar-fixed-top">
+            <div class="container">
+              <div class="row">
+                <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12">
+                  <div class="logo">
+                    <a href="index.html"><img src="{% static 'muhajireen/images/muhajir_logo.png' %}" alt="logo"></a>
+                  </div>
+                </div>
+                <div class="col-lg-9 col-md-9 col-sm-12 col-xs-12">
+                  <div class="navigation-menu">
+                    <div id="cssmenu">
+                      <ul>
+                        <li><a href="#">Home</a></li>
+                        <li><a href="#">About us</a>
+                          <ul>
+                            <li><a href="">Masjid Information</a></li>
+                            <li><a href="">FAQs- Questions</a></li>
+                            <li><a href="">Pastor Detail</a></li>
+                          </ul>
+                        </li>
+                        <li><a href="#">Sermons</a></li>
+                        <li><a href="#">Programs</a></li>
+                        <li><a href="#">Gallery</a>
+                         <ul>
+                            <li><a href="">Gallery</a></li>
+                            <li><a href="">Gallery 3 Column</a></li>
+                            <li><a href="">Gallery 3 Column Fullwidth</a></li>
+                            <li><a href="">Gallery 4 Column</a></li>
+                            <li><a href="">Gallery 4 Column Fullwidth</a></li>
+                          </ul>
+                        </li>
+                        <li><a href="">Contact Us</a></li>
+                        <li class="donate-btn"><a href="#" class="btn btn-default">Donate</a></li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        <!--  end navigation -->
+
+        <!--  slider -->
+          <header id="home-slider" class="slider-main-block">
+            <div class="item home-slider-img" style="background-image: url('images/slider-01.jpg')">
+              <div class="overlay-bg"></div>
+              <div class="container">
+                <div class="slider-dtl">
+                  <h1 class="slider-heading">Only God can fully satisfy the hungry heart of man</h1>
+                  <h5 class="slider-subheading">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum at euismod ex. Maecenas sit amet sollicitudin ex.</h5>
+                  <div class="slider-btn">
+                    <span class="about-more-btn"><a href="#" class="btn btn-inverse">About More</a></span>
+                    <span class="slider-donate-btn"><a href="#" class="btn btn-default">Donate</a></span>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="item home-slider-img" style="background-image: url('images/slider-02.jpg')">
+              <div class="overlay-bg"></div>
+              <div class="container">
+                <div class="slider-dtl">
+                  <h1 class="slider-heading">Lorem ipsum dolor sit amet upcoming events</h1>
+                  <h5 class="slider-subheading">Cursus lorem, ac iaculis metus sem vitae purus. Vivamus suscipit velit nec maximus interdum. Maecenas sit. </h5>
+                  <div class="slider-btn">
+                    <span class="about-more-btn"><a href="#" class="btn btn-inverse">About More</a></span>
+                    <span class="slider-donate-btn"><a href="#" class="btn btn-default">Donate</a></span>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="item home-slider-img" style="background-image: url('images/slider-03.jpg')">
+              <div class="overlay-bg"></div>
+              <div class="container">
+                <div class="slider-dtl">
+                  <h1 class="slider-heading">Maecenas sit amet upcoming events</h1>
+                  <h5 class="slider-subheading">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum at euismod ex. Maecenas sit amet sollicitudin ex.</h5>
+                  <div class="slider-btn">
+                    <span class="about-more-btn"><a href="#" class="btn btn-inverse">About More</a></span>
+                    <span class="slider-donate-btn"><a href="#" class="btn btn-default">Donate</a></span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </header>
+        <!--  end slider -->
+
+        <!-- jquery -->
+        <!-- jquery library js -->
+        <script type="text/javascript" src="{% static 'muhajireen/js/jquery.min.js' %}"></script>
+        <!-- bootstrap js -->
+        <script type="text/javascript" src="{% static 'muhajireen/js/bootstrap.min.js' %}"></script>
+         <!-- owl carousel js -->
+        <script type="text/javascript" src="{% static 'muhajireen/js/owl.carousel.js' %}"></script>
+        <!-- mail chimp js -->
+        <script type="text/javascript" src="{% static 'muhajireen/js/jquery.ajaxchimp.js' %}"></script>
+        <!-- smooth scroll js -->
+        <script type="text/javascript" src="{% static 'muhajireen/js/smooth-scroll.js' %}"></script>
+        <!-- magnify popup js-->
+        <script type="text/javascript" src="{% static 'muhajireen/js/jquery.magnific-popup.min.js' %}"></script>
+        <!-- menu js-->
+        <script type="text/javascript" src="{% static 'muhajireen/js/menumaker.js' %}"></script>
+        <!-- price slider js -->
+        <script type="text/javascript" src="{% static 'muhajireen/js/price-slider.js' %}"></script>
+         <!-- event countdown js -->
+        <script type="text/javascript" src="{% static 'muhajireen/js/jquery.countdown.js' %}"></script>
+        <!-- custom js -->
+        <script type="text/javascript" src="{% static 'muhajireen/js/theme.js' %}"></script>
+        <!-- end jquery -->
+
+    </body>
+</html>
