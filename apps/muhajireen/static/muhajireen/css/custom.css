@@ -1,3 +1,23 @@
 .marginup{
     margin: 5px;
 }
+
+div.work {
+    /*border: 5px solid red;*/
+    margin-left: 5px; padding: 5px;
+}
+
+img.work {
+    display: inline-block;
+    float: left;
+    margin-left: 30px;
+}
+
+img.wrap {
+    /*max-width: 70%;*/
+    margin-right: 25px;
+}
+
+p.justify {
+    text-align: justify;
+}

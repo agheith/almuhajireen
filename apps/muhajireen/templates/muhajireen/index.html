@@ -4,7 +4,7 @@
         <meta charset="utf-8">
         <title>Al Muhajireen</title>
         <meta content="width=device-width, initial-scale=1.0" name="viewport" />
-        <meta name="description" content="Church - HTML Template" />
+        <meta name="description" content="" />
         <meta name="author" content="wp-organic" />
         <meta name="MobileOptimized" content="320" />
         {% load staticfiles %}
@@ -61,7 +61,7 @@
                         <li><a href="#">Home</a></li>
                         <li><a href="#">About us</a>
                           <ul>
-                            <li><a href="">Masjid Information</a></li>
+                            <li><a href="/masjid_info">Masjid Information</a></li>
                             <li><a href="">FAQs- Questions</a></li>
                           </ul>
                         </li>
@@ -83,42 +83,38 @@
 
         <!--  slider -->
           <header id="home-slider" class="slider-main-block">
-            <div class="item home-slider-img" style="background-image: url('images/slider-01.jpg')">
+            <div class="item home-slider-img" style="background-image: url('{% static "muhajireen/images/slider1.png" %}');">
               <div class="overlay-bg"></div>
               <div class="container">
                 <div class="slider-dtl">
-                  <!-- <h1 class="slider-heading">Only God can fully satisfy the hungry heart of man</h1>
-                  <h5 class="slider-subheading">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum at euismod ex. Maecenas sit amet sollicitudin ex.</h5>
+                  <h1 class="slider-heading">Support Masjid Muhajireen</h1>
+                  <h5 class="slider-subheading">"In fact, the mosques of Allah are built up only by those who believe in Allah and the Last Day and those who establish prayer and pay zakah and who fear none but Allah. So, it is in all likelihood that they are to be among those on the right path." (Al-Qur'an 9:17-18)</h5>
                   <div class="slider-btn">
-                    <span class="about-more-btn"><a href="#" class="btn btn-inverse">About More</a></span>
                     <span class="slider-donate-btn"><a href="#" class="btn btn-default">Donate</a></span>
-                  </div> -->
-                    <img src="{% static 'muhajireen/images/fundraiser_orig.png' %}" height="460px" width="100%" alt="logo">
+                  </div>
+                  <!-- <img src="{% static 'muhajireen/images/ramadan17.png' %}"  alt="logo"> -->
                 </div>
               </div>
             </div>
-            <div class="item home-slider-img" style="background-image: url('images/slider-02.jpg')">
+            <div class="item home-slider-img" style="background-image: url('{% static "muhajireen/images/slider2b.png" %}');">
               <div class="overlay-bg"></div>
               <div class="container">
                 <div class="slider-dtl">
-                  <h1 class="slider-heading">Lorem ipsum dolor sit amet upcoming events</h1>
-                  <h5 class="slider-subheading">Cursus lorem, ac iaculis metus sem vitae purus. Vivamus suscipit velit nec maximus interdum. Maecenas sit. </h5>
+                  <h1 class="slider-heading">Ramadan 2017 at Mosque of Muhajireen</h1>
+                  <h5 class="slider-subheading">Taraweeh prayers at the Masjid Muhajireen will start at 10 p.m. for the first three nights of Ramadan and 10:10 p.m. thereafter. The Taraweeh prayers are led by Qari Safiullah Samady. ​May Allah (swt) accept all our worship and supplications in this month of mercy and grace. Ameen.</h5>
                   <div class="slider-btn">
-                    <span class="about-more-btn"><a href="#" class="btn btn-inverse">About More</a></span>
-                    <span class="slider-donate-btn"><a href="#" class="btn btn-default">Donate</a></span>
+                    <span class="slider-donate-btn"><a href="#" class="btn btn-default">Download the Ramadan Calendar</a></span>
                   </div>
                 </div>
               </div>
             </div>
-            <div class="item home-slider-img" style="background-image: url('images/slider-03.jpg')">
+            <div class="item home-slider-img"  style="background-image: url('{% static "muhajireen/images/slider3.png" %}');">
               <div class="overlay-bg"></div>
               <div class="container">
                 <div class="slider-dtl">
-                  <h1 class="slider-heading">Maecenas sit amet upcoming events</h1>
-                  <h5 class="slider-subheading">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum at euismod ex. Maecenas sit amet sollicitudin ex.</h5>
+                  <h1 class="slider-heading">Mosque of Muhajireen</h1>
+                  <h5 class="slider-subheading">Masjid Muhajireen welcomes visitors at all times in order foster a culture of tolerance and understanding in the San Francisco Bay Area. The prayer times (shown on the frontpage) in particular, are excellent times to visit the center in order to meet local Muslims and observe Muslim's worship.</h5>
                   <div class="slider-btn">
-                    <span class="about-more-btn"><a href="#" class="btn btn-inverse">About More</a></span>
-                    <span class="slider-donate-btn"><a href="#" class="btn btn-default">Donate</a></span>
                   </div>
                 </div>
               </div>
