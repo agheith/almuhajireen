@@ -3,7 +3,7 @@
 **********************************************************************************************************
     Copyright (c) 2017 .
 **********************************************************************************************************  -->
-<!-- 
+<!--
 Template Name: Church - HTML Template
 Version: 1.0.0
 Author: wp-organic
@@ -22,40 +22,42 @@ Author: wp-organic
 <meta name="keywords" content="Church HTML Template, church, html template, html theme, church theme,bible, charity, christ, christian, church, churches, events, mosque, non profit, religion, religious, sermon">
 <meta name="author" content="wp-organic" />
 <meta name="MobileOptimized" content="320" />
+{% load staticfiles %}
 <!-- favicon-icon -->
-<link rel="icon" type="image/icon" href="images/favicon/favicon.ico"> 
+<!-- <link rel="icon" type="image/icon" href="images/favicon/favicon.ico"> -->
 <!-- theme style -->
 <!-- bootstrap css -->
-<link href="css/bootstrap.min.css" rel="stylesheet" type="text/css"/> 
+<link href="{% static 'muhajireen/css/bootstrap.min.css' %}" rel="stylesheet" type="text/css"/>
 <!-- fontawesome css -->
-<link href="css/font-awesome.min.css" rel="stylesheet" type="text/css"/> 
+<link href="{% static 'muhajireen/css/font-awesome.min.css' %}" rel="stylesheet" type="text/css"/>
+<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
 <!-- flat icons css -->
-<link href="css/flaticon.css" rel="stylesheet" type="text/css"/> 
+<link href="{% static 'muhajireen/css/flaticon.css' %}" rel="stylesheet" type="text/css"/>
 <!-- google font -->
 <link href="https://fonts.googleapis.com/css?family=Playfair+Display:400,400i,700,900|Source+Sans+Pro:300,400,600,700" rel="stylesheet">
 <!-- menu css -->
-<link href="css/menumaker.css" rel="stylesheet" type="text/css"/> 
+<link href="{% static 'muhajireen/css/menumaker.css' %}" rel="stylesheet" type="text/css"/>
 <!-- owl carousel css -->
-<link href="css/owl.carousel.css" rel="stylesheet" type="text/css"/> 
+<link href="{% static 'muhajireen/css/owl.carousel.css' %}" rel="stylesheet" type="text/css"/>
 <!-- magnify popup css -->
-<link href="css/magnific-popup.css" rel="stylesheet" type="text/css"/> 
+<link href="{% static 'muhajireen/css/magnific-popup.css' %}" rel="stylesheet" type="text/css"/>
 <!-- datepicker css -->
-<link href="css/datepicker.css" rel="stylesheet" type="text/css"/> 
+<link href="{% static 'muhajireen/css/datepicker.css' %}" rel="stylesheet" type="text/css"/>
 <!-- custom css -->
-<link href="css/style.css" rel="stylesheet" type="text/css"/> 
+<link href="{% static 'muhajireen/css/style.css' %}" rel="stylesheet"/>
 <!-- end theme style -->
 </head>
 <!-- end head -->
 <!--body start-->
 <body>
-<!-- preloader --> 
+<!-- preloader -->
   <div class="preloader">
     <div class="status">
       <div class="status-message">
       </div>
     </div>
   </div>
-<!-- end preloader --> 
+<!-- end preloader -->
 <!--  navigation -->
   <div class="nav-bar navbar-fixed-top">
     <div class="container">
@@ -74,7 +76,7 @@ Author: wp-organic
                     <li><a href="index.html">Home Style 1</a></li>
                     <li><a href="../version2/index.html">Home Style 2</a></li>
                   </ul>
-                </li>                                  
+                </li>
                 <li><a href="#">Pages</a>
                   <ul>
                     <li><a href="about.html">About Us</a></li>
@@ -121,10 +123,10 @@ Author: wp-organic
               </ul>
             </div>
           </div>
-        </div>        
+        </div>
       </div>
     </div>
-  </div> 
+  </div>
 <!--  end navigation -->
 <!-- search -->
   <div class="search">
@@ -136,7 +138,7 @@ Author: wp-organic
 <!-- end search -->
 <!--  page banner -->
   <header id="page-banner" class="banner-main-block">
-    <div class="banner-img" style="background-image: url('images/top-banner.jpg')">       
+    <div class="banner-img" style="background-image: url('images/top-banner.jpg')">
       <div class="overlay-bg"></div>
       <div class="container">
         <div class="banner-block">
@@ -146,7 +148,7 @@ Author: wp-organic
             <li class="active"><a>Donation Details</a></li>
           </ol>
         </div>
-      </div>     
+      </div>
     </div>
   </header>
 <!--  end page banner -->
@@ -154,7 +156,7 @@ Author: wp-organic
   <section id="donation-dtl-block" class="donation-dtl-block">
     <div class="container">
       <div class="row">
-        <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">  
+        <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
           <div class="donation-dtl-blockOne">
             <div class="donation-dtl-img">
               <img src="images/donation/donation-dtl-bg-01.jpg" class="img-responsive" alt="donation-dtl-1">
@@ -168,11 +170,11 @@ Author: wp-organic
                 </div>
                 <span class="ui-slider-handle ui-state-default ui-corner-all"></span>
                 <span class="ui-slider-handle ui-state-default ui-corner-all"></span>
-              </div>            
+              </div>
             </div>
             <button type="button" class="btn btn-default donation-dtl-block-btn" data-toggle="modal" data-target="#donationModal">Donate</button>
-          </div> 
-          <div class="donation-modal-block"> 
+          </div>
+          <div class="donation-modal-block">
             <div id="donationModal" class="modal fade donation-modal" tabindex="-1" role="dialog" aria-labelledby="myModalHeading" aria-hidden="true">
               <div class="modal-dialog">
                 <div class="modal-content">
@@ -183,12 +185,12 @@ Author: wp-organic
                   </div>
                   <div class="modal-body">
                     <form class="contact-form form-main-block" method="post" action="contact-us.php">
-                      <div class="col-sm-4">          
+                      <div class="col-sm-4">
                         <div class="form-group">
                           <input type="text" class="form-control" id="name" name="name" placeholder="Name" required>
                         </div>
                       </div>
-                      <div class="col-sm-4">          
+                      <div class="col-sm-4">
                         <div class="form-group">
                           <input type="text" class="form-control" id="lastname" name="lastname" placeholder="Last Name" required>
                         </div>
@@ -198,12 +200,12 @@ Author: wp-organic
                           <input type="text" class="form-control" id="number" name="number" placeholder="Phone" required>
                         </div>
                       </div>
-                      <div class="col-sm-4">          
+                      <div class="col-sm-4">
                         <div class="form-group">
                           <input type="text" class="form-control" id="employer" name="employer" placeholder="Employer">
                         </div>
                       </div>
-                      <div class="col-sm-4">          
+                      <div class="col-sm-4">
                         <div class="form-group">
                           <input type="text" class="form-control" id="occupation" name="occupation" placeholder="Occupation">
                         </div>
@@ -213,17 +215,17 @@ Author: wp-organic
                           <input type="text" class="form-control" id="email" name="email" placeholder="Email" required>
                         </div>
                       </div>
-                      <div class="col-sm-12">          
-                        <div class="form-group">           
+                      <div class="col-sm-12">
+                        <div class="form-group">
                           <textarea id="address" class="form-control" name="address" placeholder="Address"></textarea>
                         </div>
                       </div>
-                      <div class="col-sm-4">          
+                      <div class="col-sm-4">
                         <div class="form-group">
                           <input type="text" class="form-control" id="city" name="city" placeholder="City" >
                         </div>
                       </div>
-                      <div class="col-sm-4">          
+                      <div class="col-sm-4">
                         <div class="form-group">
                           <input type="text" class="form-control" id="state" name="state" placeholder="State" required>
                         </div>
@@ -232,16 +234,16 @@ Author: wp-organic
                         <div class="form-group">
                           <input type="text" class="form-control" id="country" name="country" placeholder="Country">
                         </div>
-                      </div>                    
-                    </form> 
+                      </div>
+                    </form>
                   </div>
                   <div class="modal-footer">
                     <button class="btn btn-default" data-dismiss="modal" aria-hidden="true">Donate</button>
                   </div>
                 </div>
               </div>
-            </div>      
-          </div>    
+            </div>
+          </div>
           <div class="donation-dtl-blockTwo">
             <h4 class="donation-heading">Donec pellentesque condimentum massa, et lacinia libero posuere at.</h4>
             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean feugiat massa aliquet quam sollicitudin, quis feugiat eros molestie. Duis a arcu libero. Aenean non velit justo. In egestas lacus a ullamcorper sodales. Nunc tempus tortor sed metus scelerisque, non egestas nisl hendrerit. Phasellus efficitur aliquam posuere. Vivamus eleifend libero at justo efficitur varius. Etiam ac lectus vehicula, interdum enim sit amet, varius odio. Fusce vitae ligula nisi. Cras tincidunt, sem eu malesuada malesuada, lorem nibh pharetra leo, vel lacinia nisi odio vel nibh. Aliquam et lacus scelerisque, cursus leo ut, iaculis ante. Curabitur dapibus sapien in tincidunt euismod.</p>
@@ -252,7 +254,7 @@ Author: wp-organic
                 <li><a href="https://www.facebook.com/" target="_blank" class="facebook"><i class="fa fa-facebook"></i></a></li>
                 <li><a href="https://www.twitter.com/" target="_blank" class="twitter"><i class="fa fa-twitter"></i></a></li>
                 <li><a href="https://plus.google.com/" target="_blank" class="google-plus"><i class="fa fa-google-plus"></i></a></li>
-                <li><a href="https://dribbble.com/" target="_blank" class="dribble"><i class="fa fa-dribbble"></i></a></li>                    
+                <li><a href="https://dribbble.com/" target="_blank" class="dribble"><i class="fa fa-dribbble"></i></a></li>
                 <li><a href="https://www.behance.net/" target="_blank" class="behance"><i class="fa fa-behance"></i></a></li>
               </ul>
             </div>
@@ -260,14 +262,14 @@ Author: wp-organic
         </div>
       </div>
     </div>
-  </section> 
-<!--  end donation details --> 
+  </section>
+<!--  end donation details -->
 <!--  donation -->
   <section id="donation" class="donation-main-block donation-three">
     <div class="section text-center">
       <h3 class="section-heading">Related Donation Required</h3>
       <h5 class="sub-heading">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum at euismod ex, Maeceans sit amet sollicitudin ex.</h5>
-    </div>  
+    </div>
     <div class="donation-block">
       <div class="container">
         <div class="row">
@@ -284,7 +286,7 @@ Author: wp-organic
                     <li><a href="https://www.facebook.com/" target="_blank" class="facebook"><i class="fa fa-facebook"></i></a></li>
                     <li><a href="https://www.twitter.com/" target="_blank" class="twitter"><i class="fa fa-twitter"></i></a></li>
                     <li><a href="https://plus.google.com/" target="_blank" class="google-plus"><i class="fa fa-google-plus"></i></a></li>
-                    <li><a href="https://dribbble.com/" target="_blank" class="dribble"><i class="fa fa-dribbble"></i></a></li>                    
+                    <li><a href="https://dribbble.com/" target="_blank" class="dribble"><i class="fa fa-dribbble"></i></a></li>
                     <li><a href="https://www.behance.net/" target="_blank" class="behance"><i class="fa fa-behance"></i></a></li>
                   </ul>
                 </div>
@@ -295,7 +297,7 @@ Author: wp-organic
             </div>
           </div>
           <div class="col-md-4 col-sm-6 col-xs-12">
-            <div class="donation-item">            
+            <div class="donation-item">
               <div class="donation-img">
                 <img src="images/donation/donation-08.jpg" class="img-responsive" alt="donation-img-8">
                 <span class="donation-btn"><a href="#" class="btn btn-default">Donate</a></span>
@@ -307,7 +309,7 @@ Author: wp-organic
                     <li><a href="https://www.facebook.com/" target="_blank" class="facebook"><i class="fa fa-facebook"></i></a></li>
                     <li><a href="https://www.twitter.com/" target="_blank" class="twitter"><i class="fa fa-twitter"></i></a></li>
                     <li><a href="https://plus.google.com/" target="_blank" class="google-plus"><i class="fa fa-google-plus"></i></a></li>
-                    <li><a href="https://dribbble.com/" target="_blank" class="dribble"><i class="fa fa-dribbble"></i></a></li>                    
+                    <li><a href="https://dribbble.com/" target="_blank" class="dribble"><i class="fa fa-dribbble"></i></a></li>
                     <li><a href="https://www.behance.net/" target="_blank" class="behance"><i class="fa fa-behance"></i></a></li>
                   </ul>
                 </div>
@@ -318,7 +320,7 @@ Author: wp-organic
             </div>
           </div>
           <div class="col-md-4 col-sm-6 col-xs-12 donation-top-mgn">
-            <div class="donation-item">              
+            <div class="donation-item">
               <div class="donation-img">
                 <img src="images/donation/donation-09.jpg" class="img-responsive" alt="donation-img-9">
                 <span class="donation-btn"><a href="#" class="btn btn-default">Donate</a></span>
@@ -330,7 +332,7 @@ Author: wp-organic
                     <li><a href="https://www.facebook.com/" target="_blank" class="facebook"><i class="fa fa-facebook"></i></a></li>
                     <li><a href="https://www.twitter.com/" target="_blank" class="twitter"><i class="fa fa-twitter"></i></a></li>
                     <li><a href="https://plus.google.com/" target="_blank" class="google-plus"><i class="fa fa-google-plus"></i></a></li>
-                    <li><a href="https://dribbble.com/" target="_blank" class="dribble"><i class="fa fa-dribbble"></i></a></li>                    
+                    <li><a href="https://dribbble.com/" target="_blank" class="dribble"><i class="fa fa-dribbble"></i></a></li>
                     <li><a href="https://www.behance.net/" target="_blank" class="behance"><i class="fa fa-behance"></i></a></li>
                   </ul>
                 </div>
@@ -386,8 +388,8 @@ Author: wp-organic
                 <a href="mailto:wporganic@example.com?Subject=Hello%20again" target="_top">wporganic@example.com</a></p>
               </div>
             </div>
-          </div> 
-          <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12">  
+          </div>
+          <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12">
             <div class="footer-section">
               <h6 class="footer-heading">Recent Posts</h6>
             </div>
@@ -399,8 +401,8 @@ Author: wp-organic
               <div class="row">
                 <div class="col-lg-4 col-md-4 col-sm-4 col-xs-3 footer-post"><a href="blog-dtl.html"><img src="images/footer/post-thumb-02.jpg" class="img-responsive" alt="post-img-02"></a></div>
                 <div class="col-lg-8 col-md-8 col-sm-8 col-xs-9 footer-post"><a href="blog-dtl.html"><p>Vivamus et tincidunt ligula. Vivamus<br><span class="footer-post-date">12 April 2017</span></p></a></div>
-              </div> 
-            </div>          
+              </div>
+            </div>
           </div>
           <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12">
             <div class="footer-section">
@@ -458,8 +460,8 @@ Author: wp-organic
                 </div>
               </div>
             </div>
-          </div>         
-          <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12">          
+          </div>
+          <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12">
             <div class="footer-section">
               <h6 class="footer-heading">Our Gallery</h6>
             </div>
@@ -468,71 +470,71 @@ Author: wp-organic
                 <div class="portfolio-img">
                   <img src="images/footer/gallery-thumb-01.jpg" class="img-responsive" alt="gallery-thumb-01">
                   <div class="portfolio-overlay"><a href="images/gallery/gallery-07.jpg"><i class="fa fa-plus"></i></a></div>
-                </div>           
+                </div>
               </div>
               <div class="col-lg-4 col-md-4 col-sm-4 col-xs-4 portfolio-item">
                 <div class="portfolio-img">
                   <img src="images/footer/gallery-thumb-02.jpg" class="img-responsive" alt="gallery-thumb-02">
                   <div class="portfolio-overlay"><a href="images/ministry/ministry-leader.jpg"><i class="fa fa-plus"></i></a></div>
-                </div>           
+                </div>
               </div>
               <div class="col-lg-4 col-md-4 col-sm-4 col-xs-4 portfolio-item">
                 <div class="portfolio-img">
                   <img src="images/footer/gallery-thumb-03.jpg" class="img-responsive" alt="gallery-thumb-03">
                   <div class="portfolio-overlay"><a href="images/donation/donation-04.jpg"><i class="fa fa-plus"></i></a></div>
-                </div>           
+                </div>
               </div>
               <div class="col-lg-4 col-md-4 col-sm-4 col-xs-4 portfolio-item">
                 <div class="portfolio-img">
                   <img src="images/footer/gallery-thumb-04.jpg" class="img-responsive" alt="gallery-thumb-04">
                   <div class="portfolio-overlay"><a href="images/gallery/gallery-06.jpg"><i class="fa fa-plus"></i></a></div>
-                </div>           
+                </div>
               </div>
               <div class="col-lg-4 col-md-4 col-sm-4 col-xs-4 portfolio-item">
                 <div class="portfolio-img">
                   <img src="images/footer/gallery-thumb-05.jpg" class="img-responsive" alt="gallery-thumb-05">
                   <div class="portfolio-overlay"><a href="images/gallery/gallery-09.jpg"><i class="fa fa-plus"></i></a></div>
-                </div>           
+                </div>
               </div>
               <div class="col-lg-4 col-md-4 col-sm-4 col-xs-4 portfolio-item">
                 <div class="portfolio-img">
                   <img src="images/footer/gallery-thumb-06.jpg" class="img-responsive" alt="gallery-thumb-06">
                   <div class="portfolio-overlay"><a href="images/gallery/gallery-10.jpg"><i class="fa fa-plus"></i></a></div>
-                </div>           
-              </div>                
+                </div>
+              </div>
             </div>
           </div>
-        </div>  
-        <div class="row">     
+        </div>
+        <div class="row">
           <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 footer-dtl text-center">
             <p>Copyright &copy; 2017 <a href="index.html">Church</a> HTML Template by WP-Organic</p>
-          </div> 
+          </div>
         </div>
-      </div> 
+      </div>
     </div>
   </footer>
 <!-- end footer -->
 <!-- jquery -->
 <!-- jquery library js -->
-<script type="text/javascript" src="js/jquery.min.js"></script> 
+<script type="text/javascript" src="js/jquery.min.js"></script>
 <!-- bootstrap js -->
-<script type="text/javascript" src="js/bootstrap.min.js"></script> 
+<script type="text/javascript" src="js/bootstrap.min.js"></script>
  <!-- owl carousel js -->
 <script type="text/javascript" src="js/owl.carousel.js"></script>
 <!-- mail chimp js -->
-<script type="text/javascript" src="js/jquery.ajaxchimp.js"></script> 
+<script type="text/javascript" src="js/jquery.ajaxchimp.js"></script>
 <!-- smooth scroll js -->
 <script type="text/javascript" src="js/smooth-scroll.js"></script>
 <!-- magnify popup js-->
-<script type="text/javascript" src="js/jquery.magnific-popup.min.js"></script> 
-<!-- menu js--> 
-<script type="text/javascript" src="js/menumaker.js"></script> 
+<script type="text/javascript" src="js/jquery.magnific-popup.min.js"></script>
+<!-- menu js-->
+<script type="text/javascript" src="js/menumaker.js"></script>
 <!-- price slider js -->
-<script type="text/javascript" src="js/price-slider.js"></script> 
- <!-- event countdown js --> 
-<script type="text/javascript" src="js/jquery.countdown.js"></script> 
-<!-- custom js -->  
-<script type="text/javascript" src="js/theme.js"></script> 
+<script type="text/javascript" src="js/price-slider.js"></script>
+ <!-- event countdown js -->
+<script type="text/javascript" src="js/jquery.countdown.js"></script>
+<!-- custom js -->
+<script type="text/javascript" src="js/theme.js"></script>
 <!-- end jquery -->
 </body>
 <!--body end -->

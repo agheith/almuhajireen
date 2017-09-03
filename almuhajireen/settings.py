@@ -38,6 +38,7 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'stripe',
 ]
 
 MIDDLEWARE = [
@@ -119,3 +120,13 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/1.10/howto/static-files/
 
 STATIC_URL = '/static/'
+
+# stripe stuff
+
+# test keys
+# STRIPE_PUBLISHABLE_KEY = 'pk_test_Klm4pdAv1nKmUPfI6IHIAZEY'
+# STRIPE_SECRET_KEY = 'sk_test_2ZE1QYq46oOi8l6zbS35ZPwb'
+
+# live keys
+#STRIPE_PUBLISHABLE_KEY = ''
+#STRIPE_SECRET_KEY = ''

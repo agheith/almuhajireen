@@ -23,7 +23,7 @@ Author: wp-organic
     <meta name="MobileOptimized" content="320" />
     {% load staticfiles %}
     <!-- favicon-icon -->
-    <!-- <link rel="icon" type="image/icon" href="{% static 'images/favicon/favicon.ico' %}"> -->
+    <link rel="icon" type="image/icon" href="{% static 'images/favicon/favicon.ico' %}">
     <!-- bootstrap css -->
     <link href="{% static 'muhajireen/css/bootstrap.min.css' %}" rel="stylesheet" type="text/css"/>
     <!-- fontawesome css -->
@@ -112,7 +112,7 @@ Author: wp-organic
       <div class="overlay-bg"></div>
       <div class="container">
         <div class="banner-block">
-          <h3 class="section-heading">Donation</h3>
+          <h3 class="section-heading">Support Masjid Muhajireen</h3>
           <ol class="breadcrumb">
             <li><a href="index.html">Home</a></li>
             <li class="active"><a>Donation</a></li>
@@ -123,14 +123,14 @@ Author: wp-organic
   </header>
 <!--  end page banner  -->
 <!--  donation -->
-  <section id="donation" class="donation-main-block donation-two">
+  <!-- <section id="donation" class="donation-main-block donation-two">
     <div class="container">
       <div class="row">
         <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12 row-top-spacing">
           <div class="donation-item">
             <div class="donation-img block-effect">
               <a href="donation-dtl.html"><img src="images/donation/donation-01.jpg" class="img-responsive" alt="donation-img-1"></a>
-              <span class="donation-btn"><a href="#" class="btn btn-default">Donate</a></span>
+              <span class="donation-btn"><a href="#" class="btn btn-default">Support Masjid Muhajireen</a></span>
             </div>
             <div class="donation-content">
               <p class="social-media-heading">Share Post :</p>
@@ -266,10 +266,10 @@ Author: wp-organic
         </div>
       </div>
     </div>
-  </section>
+  </section> -->
 <!--  end donation -->
 <!--  donation bg -->
-  <section id="donation-bg" class="donation-bg-section">
+  <!-- <section id="donation-bg" class="donation-bg-section">
     <div class="container">
       <div class="row">
         <div class="col-lg-12 col-md-12 col-md-12 col-xs-12">
@@ -278,7 +278,7 @@ Author: wp-organic
               <div class="overlay-bg"></div>
               <div class="donation-content">
                 <h2 class="donation-heading">Only God can fully satisfy the hungry heart of man</h2>
-                <h5 class="donation-dtl">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum at euismod ex. Maecenas sit amet sollicitudin ex.</h5>
+                <h5 class="donation-dtl">
                 <span class="donation-dtl-btn"><a href="#" class="btn btn-default">Donate</a></span>
               </div>
             </div>
@@ -286,10 +286,215 @@ Author: wp-organic
         </div>
       </div>
     </div>
+  </section> -->
+  <section id="donation-dtl-block" class="donation-dtl-block">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+          <div class="donation-dtl-blockOne">
+            <div class="donation-dtl-img">
+              <img src="{% static 'muhajireen/images/donation_masjid.png' %}" class="img-responsive" alt="causes-img-1">
+            </div>
+            <!-- <div class="price-filter">
+              <div class="price-slider-amount">
+                <span>Raised</span><input type="text" id="amount" name="price" placeholder="Add Your Price">
+              </div>
+              <div id="slider-range" class=" ui-slider ui-slider-horizontal ui-widget ui-widget-content ui-corner-all slider-range">
+                <div class="ui-slider-range ui-widget-header ui-corner-all">
+                </div>
+                <span class="ui-slider-handle ui-state-default ui-corner-all"></span>
+                <span class="ui-slider-handle ui-state-default ui-corner-all"></span>
+              </div>
+            </div> -->
+            <a href="/pay" class="btn btn-default donation-dtl-block-btn buttondown">Donate</a>  <!--data-toggle="modal" data-target="#donationModal" -->
+          </div>
+          <!-- <div class="donation-modal-block">
+            <div id="donationModal" class="modal fade donation-modal" tabindex="-1" role="dialog" aria-labelledby="myModalHeading" aria-hidden="true">
+              <div class="modal-dialog">
+                <div class="modal-content"> -->
+                  <!-- <div class="modal-header">
+                    <button type="button" class="close close-btn" data-dismiss="modal" aria-hidden="true">×</button>
+                    <h4 id="myModalHeading" class="myModalHeading">Donor Information</h4>
+                    <h6 id="myModalSubHeading" class="myModalSubHeading">Aliquam laoreet orci quis risus vulputate temp uisque <br/>aliquet, ipsum at mattis mattis</h6>
+                  </div> -->
+                  <!-- CREDIT CARD FORM STARTS HERE -->
+
+                 <!-- <div class="panel panel-default credit-card-box">
+                     <div class="panel-heading display-table" >
+                         <div class="row display-tr" >
+                             <h3 class="panel-title display-td" >Payment Details</h3>
+                             <div class="display-td" >
+                                 <img class="img-responsive pull-right" src="http://i76.imgup.net/accepted_c22e0.png">
+                             </div>
+                         </div>
+                     </div>
+                     <div class="panel-body">
+                         <form role="form" id="payment-form" method="POST" action=""> {% csrf_token %}
+                             <div class="row">
+                                 <div class="col-xs-12">
+                                     <div class="form-group">
+                                         <label for="cardNumber">Cardholder Name</label>
+                                         <div class="input-group">
+                                             <input
+                                                 type="tel"
+                                                 class="form-control"
+                                                 name="cardName"
+                                                 placeholder="Name on the card"
+                                                 autocomplete=""
+                                                 required autofocus
+                                             />
+                                         </div>
+                                     </div>
+                                 </div>
+                             </div>
+                             <div class="row">
+                                 <div class="col-xs-12">
+                                     <div class="form-group">
+                                         <label for="cardNumber">CARD NUMBER</label>
+                                         <div class="input-group">
+                                             <input
+                                                 type="tel"
+                                                 class="form-control"
+                                                 name="cardNumber"
+                                                 placeholder="Valid Card Number"
+                                                 autocomplete="cc-number"
+                                                 required autofocus
+                                             />
+                                             <span class="input-group-addon"><i class="fa fa-credit-card"></i></span>
+                                         </div>
+                                     </div>
+                                 </div>
+                             </div>
+                             <div class="row">
+                                 <div class="col-xs-7 col-md-7">
+                                     <div class="form-group">
+                                         <label for="cardExpiry"><span class="hidden-xs">EXPIRATION</span><span class="visible-xs-inline">EXP</span> DATE</label>
+                                         <input
+                                             type="tel"
+                                             class="form-control"
+                                             name="cardExpiry"
+                                             placeholder="MM / YY"
+                                             autocomplete="cc-exp"
+                                             required
+                                         />
+                                     </div>
+                                 </div>
+                                 <div class="col-xs-5 col-md-5 pull-right">
+                                     <div class="form-group">
+                                         <label for="cardCVC">CV CODE</label>
+                                         <input
+                                             type="tel"
+                                             class="form-control"
+                                             name="cardCVC"
+                                             placeholder="CVC"
+                                             autocomplete="cc-csc"
+                                             required
+                                         />
+                                     </div>
+                                 </div>
+                             </div>
+                             <div class="row">
+                                 <div class="col-xs-12">
+                                     <button class="btn btn-success btn-lg btn-block" data-dismiss="modal" aria-hidden="true">Donate</button>
+                                 </div>
+                             </div>
+                             <div class="row" style="display:none;">
+                                 <div class="col-xs-12">
+                                     <p class="payment-errors"></p>
+                                 </div>
+                             </div>
+                         </form>
+                     </div>
+                 </div> -->
+                <!-- CREDIT CARD FORM ENDS HERE -->
+                  <!-- <div class="modal-body">
+                    <form class="contact-form form-main-block" method="post" action="contact-us.php">
+                      <div class="col-sm-4">
+                        <div class="form-group">
+                          <input type="text" class="form-control" id="name" name="name" placeholder="Name" required>
+                        </div>
+                      </div>
+                      <div class="col-sm-4">
+                        <div class="form-group">
+                          <input type="text" class="form-control" id="lastname" name="lastname" placeholder="Last Name" required>
+                        </div>
+                      </div>
+                      <div class="col-sm-4">
+                        <div class="form-group">
+                          <input type="text" class="form-control" id="number" name="number" placeholder="Phone" required>
+                        </div>
+                      </div>
+                      <div class="col-sm-4">
+                        <div class="form-group">
+                          <input type="text" class="form-control" id="employer" name="employer" placeholder="Employer">
+                        </div>
+                      </div>
+                      <div class="col-sm-4">
+                        <div class="form-group">
+                          <input type="text" class="form-control" id="occupation" name="occupation" placeholder="Occupation">
+                        </div>
+                      </div>
+                      <div class="col-sm-4">
+                        <div class="form-group">
+                          <input type="text" class="form-control" id="email" name="email" placeholder="Email" required>
+                        </div>
+                      </div>
+                      <div class="col-sm-12">
+                        <div class="form-group">
+                          <textarea id="address" class="form-control" name="address" placeholder="Address"></textarea>
+                        </div>
+                      </div>
+                      <div class="col-sm-4">
+                        <div class="form-group">
+                          <input type="text" class="form-control" id="city" name="city" placeholder="City" >
+                        </div>
+                      </div>
+                      <div class="col-sm-4">
+                        <div class="form-group">
+                          <input type="text" class="form-control" id="state" name="state" placeholder="State" required>
+                        </div>
+                      </div>
+                      <div class="col-sm-4">
+                        <div class="form-group">
+                          <input type="text" class="form-control" id="country" name="country" placeholder="Country">
+                        </div>
+                      </div>
+                    </form>
+                  </div> -->
+                  <!-- <div class="modal-footer">
+                    <button class="btn btn-default" data-dismiss="modal" aria-hidden="true">Donate</button>
+                  </div> -->
+                <!-- </div>
+              </div>
+            </div>
+          </div> -->
+          <!-- bootstrap modal ends here -->
+
+          <div class="donation-dtl-blockTwo">
+              <h4 class="donation-heading">Masjid Muhajireen is a community-based, independent non-profit organization funded by contributions from members of our community. We rely on the generosity of donors like you to operate on a daily basis.</h4>
+            <h5 class="donation-heading">Make an online donation or mail your check payable to "Islamic Association of Immigrants" to: <strong>185 Folsom Avenue, Hayward, CA 94544</strong></h5>
+            <p>Ibn Maajah (242) narrated that Abu Hurayrah said: “The good deeds that will reach a believer after his death are: knowledge which he learned and then spread; a righteous son whom he leaves behind; a copy of the Qur’aan that he leaves as a legacy; a masjid that he built; a house that he built for wayfarers; a canal that he dug; or charity that he gave during his lifetime when he was in good health. These deeds will reach him after his death.” </p>
+            <p>"In fact, the mosques of Allah are built up only by those who believe in Allah and the Last Day and those who establish prayer and pay zakah and who fear none but Allah. So, it is in all likelihood that they are to be among those on the right path." (Al-Qur'an 9:17-18)</p>
+            <h4 class="news-heading">Donation Receipt</h4>
+            <p>Masjid Muhajireen is an IRS-approved charitable organization under Section 501 (c)(3) of the Internal Revenue Code. Your gift is deductible to the fullest extent allowed by the IRS under Tax ID#94-3138880. Gifts to Masjid Muhajireen are deductible when included among your itemized deductions on your federal income tax return. Masjid Muhajireen will mail you a gift receipt after you make your donation. Please contact us if you have not received your receipt.</p>
+            <!-- <p class="social-media-heading">Share Post :</p>
+            <div class="social-icon">
+              <ul>
+                <li><a href="https://www.facebook.com/" target="_blank" class="facebook"><i class="fa fa-facebook"></i></a></li>
+                <li><a href="https://www.twitter.com/" target="_blank" class="twitter"><i class="fa fa-twitter"></i></a></li>
+                <li><a href="https://plus.google.com/" target="_blank" class="google-plus"><i class="fa fa-google-plus"></i></a></li>
+                <li><a href="https://dribbble.com/" target="_blank" class="dribble"><i class="fa fa-dribbble"></i></a></li>
+                <li><a href="https://www.behance.net/" target="_blank" class="behance"><i class="fa fa-behance"></i></a></li>
+              </ul>
+            </div> -->
+          </div>
+        </div>
+      </div>
+    </div>
   </section>
 <!--  end donation bg -->
 <!--  donation block -->
-  <section class="donation-main-block donation-two">
+  <!-- <section class="donation-main-block donation-two">
     <div class="container">
       <div class="row">
         <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12 row-top-spacing">
@@ -363,10 +568,10 @@ Author: wp-organic
         </div>
       </div>
     </div>
-  </section>
+  </section> -->
 <!--  end donation -->
 <!--  donation background -->
-  <section id="donation-footer" class="donation-footer-block">
+  <!-- <section id="donation-footer" class="donation-footer-block">
     <div class="donation-bg-itemTwo">
       <div class="bg-img" style="background-image: url('images/donation/donation-bg-02.jpg')">
         <div class="overlay-bg"></div>
@@ -375,7 +580,7 @@ Author: wp-organic
             <div class="col-lg-offset-5 col-lg-5 col-md-offset-5 col-md-5 col-sm-12 col-xs-12">
               <div class="donation-content">
                 <a href="donation-dtl.html"><h2 class="donation-heading">Sed porta, metus eget euismod pharetra, libero nibh finibus</h2></a>
-                <h5 class="donation-dtl">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum at euismod ex. Maecenas sit amet sollicitudin ex.</h5>
+                <h5 class="donation-dtl">Masjid Muhajireen is a community-based, independent non-profit organization funded by contributions from members of our community. We rely on the generosity of donors like you to operate on a daily basis.</h5>
                 <span class="donation-dtl-btn"><a href="#" class="btn btn-default">Donate</a></span>
               </div>
             </div>
@@ -383,7 +588,7 @@ Author: wp-organic
         </div>
       </div>
     </div>
-  </section>
+  </section> -->
 <!-- end donation background -->
 <!-- footer -->
   <footer id="footer" class="footer-main-block">
@@ -552,9 +757,14 @@ Author: wp-organic
 <script type="text/javascript" src="{% static 'muhajireen/js/price-slider.js' %}"></script>
  <!-- event countdown js -->
 <script type="text/javascript" src="{% static 'muhajireen/js/jquery.countdown.js' %}"></script>
-<!-- custom js -->
+<!-- theme js -->
 <script type="text/javascript" src="{% static 'muhajireen/js/theme.js' %}"></script>
 <!-- end jquery -->
 
+<script type="text/javascript" src="https://js.stripe.com/v2/"></script>
+<!-- strip sdk -->
+<script type="text/javascript" src="{% static 'muhajireen/js/custom.js' %}"></script>
+<!-- stripe jquery code to fetch the form -->
+</script>
 </body>
 </html>
