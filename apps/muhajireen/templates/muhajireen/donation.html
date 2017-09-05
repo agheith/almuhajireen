@@ -295,119 +295,164 @@ Author: wp-organic
             <div class="donation-dtl-img">
               <img src="{% static 'muhajireen/images/donation_masjid.png' %}" class="img-responsive" alt="causes-img-1">
             </div>
-            <!-- <div class="price-filter">
-              <div class="price-slider-amount">
-                <span>Raised</span><input type="text" id="amount" name="price" placeholder="Add Your Price">
-              </div>
-              <div id="slider-range" class=" ui-slider ui-slider-horizontal ui-widget ui-widget-content ui-corner-all slider-range">
-                <div class="ui-slider-range ui-widget-header ui-corner-all">
-                </div>
-                <span class="ui-slider-handle ui-state-default ui-corner-all"></span>
-                <span class="ui-slider-handle ui-state-default ui-corner-all"></span>
-              </div>
-            </div> -->
-            <a href="/pay" class="btn btn-default donation-dtl-block-btn buttondown">Donate</a>  <!--data-toggle="modal" data-target="#donationModal" -->
           </div>
-          <!-- <div class="donation-modal-block">
+          <div class="donation-amount" style="padding:50px 50px; margin-top:30px; border: 2px solid #B40565; border-radius: 50px;">
+
+            <!-- <button type="button" class="btn btn-default donation-dtl-block-btn" data-toggle="modal" data-target="#donationModal">Donate</button> -->
+
+                <form action="/pay" method="POST" style="display:inline; margin-right:20px; margin-left:100px;">
+
+                    <input type="hidden" name="amount" value="1"></input>
+                    {% csrf_token %}
+                    <script
+                      src="https://checkout.stripe.com/checkout.js" class="stripe-button"
+                      data-key="pk_test_Klm4pdAv1nKmUPfI6IHIAZEY"
+                      data-amount="100"
+                      data-name="Masjid Muhajireen"
+                      data-label="Donate $1.00"
+                      data-panel-label="Donate"
+                      data-zip-code="true"
+                      data-image="{% static 'muhajireen/images/muhajir_logo.png' %}"
+                      data-allow-remember-me="false"
+                      data-locale="auto">
+                    </script>
+
+                </form>
+
+
+                <form action="/pay" method="POST" style="display:inline; margin-right:20px;">
+
+                    <input type="hidden" name="amount" value="5"></input>
+                    {% csrf_token %}
+                    <script
+                      src="https://checkout.stripe.com/checkout.js" class="stripe-button"
+                      data-key="pk_test_Klm4pdAv1nKmUPfI6IHIAZEY"
+                      data-amount="500"
+                      data-name="Masjid Muhajireen"
+                      data-label="Donate $5.00"
+                      data-panel-label="Donate"
+                      data-zip-code="true"
+                      data-image="{% static 'muhajireen/images/muhajir_logo.png' %}"
+                      data-allow-remember-me="false"
+                      data-locale="auto">
+                    </script>
+
+                </form>
+
+
+                <form action="/pay" method="POST" style="display:inline; margin-right:20px;">
+
+                    <input type="hidden" name="amount" value="10"></input>
+                    {% csrf_token %}
+                    <script
+                      src="https://checkout.stripe.com/checkout.js" class="stripe-button"
+                      data-key="pk_test_Klm4pdAv1nKmUPfI6IHIAZEY"
+                      data-amount="1000"
+                      data-name="Masjid Muhajireen"
+                      data-label="Donate $10.00"
+                      data-panel-label="Donate"
+                      data-zip-code="true"
+                      data-image="{% static 'muhajireen/images/muhajir_logo.png' %}"
+                      data-allow-remember-me="false"
+                      data-locale="auto">
+                    </script>
+
+                </form>
+
+                <form action="/pay" method="POST" style="display:inline; margin-right:20px;">
+
+                    <input type="hidden" name="amount" value="20"></input>
+                    {% csrf_token %}
+                    <script
+                      src="https://checkout.stripe.com/checkout.js" class="stripe-button"
+                      data-key="pk_test_Klm4pdAv1nKmUPfI6IHIAZEY"
+                      data-amount="2000"
+                      data-name="Masjid Muhajireen"
+                      data-label="Donate $20.00"
+                      data-panel-label="Donate"
+                      data-zip-code="true"
+                      data-image="{% static 'muhajireen/images/muhajir_logo.png' %}"
+                      data-allow-remember-me="false"
+                      data-locale="auto">
+                    </script>
+
+                </form>
+
+                <form action="/pay" method="POST" style="display:inline; margin-right:20px;">
+
+                    <input type="hidden" name="amount" value="50"></input>
+                    {% csrf_token %}
+                    <script
+                      src="https://checkout.stripe.com/checkout.js" class="stripe-button"
+                      data-key="pk_test_Klm4pdAv1nKmUPfI6IHIAZEY"
+                      data-amount="5000"
+                      data-name="Masjid Muhajireen"
+                      data-label="Donate $50.00"
+                      data-panel-label="Donate"
+                      data-zip-code="true"
+                      data-image="{% static 'muhajireen/images/muhajir_logo.png' %}"
+                      data-allow-remember-me="false"
+                      data-locale="auto">
+                    </script>
+
+                </form>
+
+
+                <form action="/pay" method="POST" style="display:inline; margin-right:20px;">
+
+                    <input type="hidden" name="amount" value="100"></input>
+                    {% csrf_token %}
+                    <script
+                      src="https://checkout.stripe.com/checkout.js" class="stripe-button"
+                      data-key="pk_test_Klm4pdAv1nKmUPfI6IHIAZEY"
+                      data-amount="10000"
+                      data-name="Masjid Muhajireen"
+                      data-label="Donate $100.00"
+                      data-panel-label="Donate"
+                      data-zip-code="true"
+                      data-image="{% static 'muhajireen/images/muhajir_logo.png' %}"
+                      data-allow-remember-me="false"
+                      data-locale="auto">
+                    </script>
+
+                </form>
+
+
+
+                <form action="/pay" method="POST" style="display:block; margin:20px 0 0 300px;">
+                    {% csrf_token %}
+                    <label for="donation">Enter Donation Amount</label>
+                    <input type="number" name="amount" id="custom-donation" placeholder="" min="1.00" step="10.00 " />
+                    <script
+                     src="https://checkout.stripe.com/checkout.js"
+                     class="stripe-button"
+                     data-key="pk_test_Klm4pdAv1nKmUPfI6IHIAZEY"
+                     data-name="Masjid Muhajireen"
+                     data-image="{% static 'muhajireen/images/muhajir_logo.png' %}"
+                     data-label="DONATE"
+                     data-zip-code="true"
+                     data-allow-remember-me="false"
+                     data-panel-label="Donate"
+                     data-amount= required
+                     data-locale="auto">
+                    </script>
+
+                </form>
+
+
+          </div>
+
+          <div class="donation-modal-block">
             <div id="donationModal" class="modal fade donation-modal" tabindex="-1" role="dialog" aria-labelledby="myModalHeading" aria-hidden="true">
               <div class="modal-dialog">
-                <div class="modal-content"> -->
-                  <!-- <div class="modal-header">
+
+                <!-- <div class="modal-content">
+                  <div class="modal-header">
                     <button type="button" class="close close-btn" data-dismiss="modal" aria-hidden="true">×</button>
                     <h4 id="myModalHeading" class="myModalHeading">Donor Information</h4>
                     <h6 id="myModalSubHeading" class="myModalSubHeading">Aliquam laoreet orci quis risus vulputate temp uisque <br/>aliquet, ipsum at mattis mattis</h6>
-                  </div> -->
-                  <!-- CREDIT CARD FORM STARTS HERE -->
-
-                 <!-- <div class="panel panel-default credit-card-box">
-                     <div class="panel-heading display-table" >
-                         <div class="row display-tr" >
-                             <h3 class="panel-title display-td" >Payment Details</h3>
-                             <div class="display-td" >
-                                 <img class="img-responsive pull-right" src="http://i76.imgup.net/accepted_c22e0.png">
-                             </div>
-                         </div>
-                     </div>
-                     <div class="panel-body">
-                         <form role="form" id="payment-form" method="POST" action=""> {% csrf_token %}
-                             <div class="row">
-                                 <div class="col-xs-12">
-                                     <div class="form-group">
-                                         <label for="cardNumber">Cardholder Name</label>
-                                         <div class="input-group">
-                                             <input
-                                                 type="tel"
-                                                 class="form-control"
-                                                 name="cardName"
-                                                 placeholder="Name on the card"
-                                                 autocomplete=""
-                                                 required autofocus
-                                             />
-                                         </div>
-                                     </div>
-                                 </div>
-                             </div>
-                             <div class="row">
-                                 <div class="col-xs-12">
-                                     <div class="form-group">
-                                         <label for="cardNumber">CARD NUMBER</label>
-                                         <div class="input-group">
-                                             <input
-                                                 type="tel"
-                                                 class="form-control"
-                                                 name="cardNumber"
-                                                 placeholder="Valid Card Number"
-                                                 autocomplete="cc-number"
-                                                 required autofocus
-                                             />
-                                             <span class="input-group-addon"><i class="fa fa-credit-card"></i></span>
-                                         </div>
-                                     </div>
-                                 </div>
-                             </div>
-                             <div class="row">
-                                 <div class="col-xs-7 col-md-7">
-                                     <div class="form-group">
-                                         <label for="cardExpiry"><span class="hidden-xs">EXPIRATION</span><span class="visible-xs-inline">EXP</span> DATE</label>
-                                         <input
-                                             type="tel"
-                                             class="form-control"
-                                             name="cardExpiry"
-                                             placeholder="MM / YY"
-                                             autocomplete="cc-exp"
-                                             required
-                                         />
-                                     </div>
-                                 </div>
-                                 <div class="col-xs-5 col-md-5 pull-right">
-                                     <div class="form-group">
-                                         <label for="cardCVC">CV CODE</label>
-                                         <input
-                                             type="tel"
-                                             class="form-control"
-                                             name="cardCVC"
-                                             placeholder="CVC"
-                                             autocomplete="cc-csc"
-                                             required
-                                         />
-                                     </div>
-                                 </div>
-                             </div>
-                             <div class="row">
-                                 <div class="col-xs-12">
-                                     <button class="btn btn-success btn-lg btn-block" data-dismiss="modal" aria-hidden="true">Donate</button>
-                                 </div>
-                             </div>
-                             <div class="row" style="display:none;">
-                                 <div class="col-xs-12">
-                                     <p class="payment-errors"></p>
-                                 </div>
-                             </div>
-                         </form>
-                     </div>
-                 </div> -->
-                <!-- CREDIT CARD FORM ENDS HERE -->
-                  <!-- <div class="modal-body">
+                  </div>
+                  <div class="modal-body">
                     <form class="contact-form form-main-block" method="post" action="contact-us.php">
                       <div class="col-sm-4">
                         <div class="form-group">
@@ -460,14 +505,14 @@ Author: wp-organic
                         </div>
                       </div>
                     </form>
-                  </div> -->
-                  <!-- <div class="modal-footer">
+                  </div>
+                  <div class="modal-footer">
                     <button class="btn btn-default" data-dismiss="modal" aria-hidden="true">Donate</button>
-                  </div> -->
-                <!-- </div>
+                  </div>
+              </div> -->
               </div>
             </div>
-          </div> -->
+          </div>
           <!-- bootstrap modal ends here -->
 
           <div class="donation-dtl-blockTwo">
@@ -760,6 +805,9 @@ Author: wp-organic
 <!-- theme js -->
 <script type="text/javascript" src="{% static 'muhajireen/js/theme.js' %}"></script>
 <!-- end jquery -->
+
+<!-- jQuery to read the custom donation value -->
+<script type="text/javascript" src="{% static 'muhajireen/js/donate.js' %}"></script>
 
 <script type="text/javascript" src="https://js.stripe.com/v2/"></script>
 <!-- strip sdk -->

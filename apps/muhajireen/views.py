@@ -1,5 +1,5 @@
 from django.conf import settings
-from django.shortcuts import render, redirect, HttpResponse
+from django.shortcuts import render, redirect, HttpResponse, HttpResponseRedirect
 import stripe
 
 stripe.api_key = "sk_test_2ZE1QYq46oOi8l6zbS35ZPwb"
@@ -19,13 +19,15 @@ def pay(request):
         # Token is created using Stripe.js or Checkout!
         # Get the payment token submitted by the form:
         token = request.POST['stripeToken']
+        amount = request.POST['amount']
+        print amount
         print token
 
         stripe.Charge.create(
-            amount=2000,
+            amount=str(int(amount)*100),
             currency="usd",
             source=token, # obtained with Stripe.js
             description="Charge for ava.martinez@example.com"
         )
-
-    return render (request, 'muhajireen/pay.html')
+    # redirect to a new URL:
+    return redirect('/')
