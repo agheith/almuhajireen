@@ -75,8 +75,8 @@ Author: wp-organic
               <div class="navigation-menu">
                 <div id="cssmenu">
                   <ul>
-                    <li><a href="#">Home</a></li>
-                    <li><a href="#">About us</a>
+                    <li><a href="/">Home</a></li>
+                    <li><a href="/about">About us</a>
                       <ul>
                         <li><a href="/masjid_info">Masjid Information</a></li>
                         <li><a href="/faq">FAQs- Questions</a></li>
@@ -84,7 +84,7 @@ Author: wp-organic
                       </ul>
                     </li>
                     <!-- <li><a href="#">Visit Us</a></li> -->
-                    <li><a href="/sermons">Sermons</a></li>
+                    <li><a href="/khutbas">Khutbas</a></li>
                     <li><a href="/programs">Programs</a></li>
                     <li><a href="/sundayschool">School</a>
                     </li>
@@ -113,14 +113,15 @@ Author: wp-organic
       <div class="container">
         <div class="banner-block">
           <h3 class="section-heading">Support Masjid Muhajireen</h3>
-          <ol class="breadcrumb">
+          <!-- <ol class="breadcrumb">
             <li><a href="index.html">Home</a></li>
             <li class="active"><a>Donation</a></li>
-          </ol>
+          </ol> -->
         </div>
       </div>
     </div>
   </header>
+
 <!--  end page banner  -->
 <!--  donation -->
   <!-- <section id="donation" class="donation-main-block donation-two">
@@ -143,6 +144,7 @@ Author: wp-organic
                   <li><a href="https://www.behance.net/" target="_blank" class="behance"><i class="fa fa-behance"></i></a></li>
                 </ul>
               </div>
+
               <a href="donation-dtl.html"><h4 class="donation-heading">Lorem ipsum dolor sit amet.</h4></a>
               <p class="donation-dtl">Aliquam laoreet orci quis risus vulputate tem Quisque aliquet, ipsum at mattis mattis</p>
               <a class="read-more" href="donation-dtl.html">Read More<i class="fa fa-long-arrow-right"></i></a>
@@ -295,6 +297,23 @@ Author: wp-organic
             <div class="donation-dtl-img">
               <img src="{% static 'muhajireen/images/donation_masjid.png' %}" class="img-responsive" alt="causes-img-1">
             </div>
+<<<<<<< HEAD
+=======
+            <!-- <div class="price-filter">
+              <div class="price-slider-amount">
+                <span>Raised</span><input type="text" id="amount" name="price" placeholder="Add Your Price">
+              </div>
+              <div id="slider-range" class=" ui-slider ui-slider-horizontal ui-widget ui-widget-content ui-corner-all slider-range">
+                <div class="ui-slider-range ui-widget-header ui-corner-all">
+                </div>
+                <span class="ui-slider-handle ui-state-default ui-corner-all"></span>
+                <span class="ui-slider-handle ui-state-default ui-corner-all"></span>
+              </div>
+            </div> -->
+          <!-- <a href="/do_donation" class="btn btn-default donation-dtl-block-btn buttondown">Donate</a> -->
+          <button type="button" id="customButton" class="btn btn-default donation-dtl-block-btn buttondown" name="button">Donate Now</button>
+           <!-- data-toggle="modal" data-target="#donationModal" -->
+>>>>>>> master
           </div>
           <div class="donation-amount" style="padding:50px 50px; margin-top:30px; border: 2px solid #B40565; border-radius: 50px;">
 
@@ -813,6 +832,47 @@ Author: wp-organic
 <!-- strip sdk -->
 <script type="text/javascript" src="{% static 'muhajireen/js/custom.js' %}"></script>
 <!-- stripe jquery code to fetch the form -->
+</script>
+<script src="https://checkout.stripe.com/checkout.js"></script>
+
+
+<script>
+var handler = StripeCheckout.configure({
+  key: 'pk_test_6pRNASCoBOKtIshFeQd4XMUh',
+  image: 'https://stripe.com/img/documentation/checkout/marketplace.png', // TODO: masjid log
+  locale: 'auto',
+
+  token: function(token) {
+    console.log("this is the token id ", token.id);
+    console.log("this is the token email", token.email);
+    console.log("you just pressed button");
+    // You can access the token ID with `token.id`.
+    // Get the token ID to your server-side code for use
+    console.log(handler);
+    // $.post('/pay', {"handler": handler})
+
+    // send all the stuff to back
+  }
+
+
+});
+
+document.getElementById('customButton').addEventListener('click', function(e) {
+  // Open Checkout with further options:
+  handler.open({
+    name: 'Masjid Muhajireen',
+    description: 'Fi sabilillah',
+    zipCode: true,
+    amount: 2000,
+  });
+  e.preventDefault();
+});
+  // $.post('/pay', {"handler": handler, "X-CSRFToken" : {% csrf_token %}})
+
+// Close Checkout on page navigation:
+window.addEventListener('popstate', function() {
+  handler.close();
+});
 </script>
 </body>
 </html>

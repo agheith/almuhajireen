@@ -11,9 +11,6 @@ def index(request):
 def masjid_info(request):
     return render(request, 'muhajireen/masjid_info.html')
 
-def donate(request):
-    return render(request, 'muhajireen/donation.html')
-
 def pay(request):
     if request.method == 'POST':
         # Token is created using Stripe.js or Checkout!
@@ -22,7 +19,6 @@ def pay(request):
         amount = request.POST['amount']
         print amount
         print token
-
         stripe.Charge.create(
             amount=str(int(amount)*100),
             currency="usd",
@@ -31,3 +27,30 @@ def pay(request):
         )
     # redirect to a new URL:
     return redirect('/')
+    
+def faq(request):
+    return render(request, 'muhajireen/faq.html')
+
+def visitus(request):
+    return render(request, 'muhajireen/visitus.html')
+
+def about(request):
+    return render(request, 'muhajireen/about.html')
+
+def khutbas(request):
+    return render(request, 'muhajireen/khutbas.html')
+
+def programs(request):
+    return render(request, 'muhajireen/event.html')
+
+def sundayschool(request):
+    return render(request, 'muhajireen/gallery-3-col.html')
+
+def contact(request):
+    return render(request, 'muhajireen/contact.html')
+
+def donate(request):
+    return render(request, 'muhajireen/donation.html')
+
+def paymentpopup(request):
+    return render(request, 'muhajireen/paymentpopup.html')
