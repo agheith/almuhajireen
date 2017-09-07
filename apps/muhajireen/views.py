@@ -12,6 +12,8 @@ def masjid_info(request):
     return render(request, 'muhajireen/masjid_info.html')
 
 def pay(request):
+    print request
+    return
     if request.method == 'POST':
         # Token is created using Stripe.js or Checkout!
         # Get the payment token submitted by the form:
@@ -48,3 +50,6 @@ def contact(request):
 
 def donate(request):
     return render(request, 'muhajireen/donation.html')
+
+def paymentpopup(request):
+    return render(request, 'muhajireen/paymentpopup.html')

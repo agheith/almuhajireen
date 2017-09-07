@@ -14,6 +14,7 @@ urlpatterns = [
     url(r'^programs$', views.programs),
     url(r'^sundayschool$', views.sundayschool),
     url(r'^contact$', views.contact),
+    url(r'^do_donation$', views.paymentpopup)
 
 
 

@@ -121,6 +121,7 @@ Author: wp-organic
       </div>
     </div>
   </header>
+
 <!--  end page banner  -->
 <!--  donation -->
   <!-- <section id="donation" class="donation-main-block donation-two">
@@ -143,6 +144,7 @@ Author: wp-organic
                   <li><a href="https://www.behance.net/" target="_blank" class="behance"><i class="fa fa-behance"></i></a></li>
                 </ul>
               </div>
+
               <a href="donation-dtl.html"><h4 class="donation-heading">Lorem ipsum dolor sit amet.</h4></a>
               <p class="donation-dtl">Aliquam laoreet orci quis risus vulputate tem Quisque aliquet, ipsum at mattis mattis</p>
               <a class="read-more" href="donation-dtl.html">Read More<i class="fa fa-long-arrow-right"></i></a>
@@ -306,7 +308,9 @@ Author: wp-organic
                 <span class="ui-slider-handle ui-state-default ui-corner-all"></span>
               </div>
             </div> -->
-            <a href="/pay" class="btn btn-default donation-dtl-block-btn buttondown">Donate</a>  <!--data-toggle="modal" data-target="#donationModal" -->
+          <!-- <a href="/do_donation" class="btn btn-default donation-dtl-block-btn buttondown">Donate</a> -->
+          <button type="button" id="customButton" class="btn btn-default donation-dtl-block-btn buttondown" name="button">Donate Now</button>
+           <!-- data-toggle="modal" data-target="#donationModal" -->
           </div>
           <!-- <div class="donation-modal-block">
             <div id="donationModal" class="modal fade donation-modal" tabindex="-1" role="dialog" aria-labelledby="myModalHeading" aria-hidden="true">
@@ -765,6 +769,47 @@ Author: wp-organic
 <!-- strip sdk -->
 <script type="text/javascript" src="{% static 'muhajireen/js/custom.js' %}"></script>
 <!-- stripe jquery code to fetch the form -->
+</script>
+<script src="https://checkout.stripe.com/checkout.js"></script>
+
+
+<script>
+var handler = StripeCheckout.configure({
+  key: 'pk_test_6pRNASCoBOKtIshFeQd4XMUh',
+  image: 'https://stripe.com/img/documentation/checkout/marketplace.png', // TODO: masjid log
+  locale: 'auto',
+
+  token: function(token) {
+    console.log("this is the token id ", token.id);
+    console.log("this is the token email", token.email);
+    console.log("you just pressed button");
+    // You can access the token ID with `token.id`.
+    // Get the token ID to your server-side code for use
+    console.log(handler);
+    // $.post('/pay', {"handler": handler})
+
+    // send all the stuff to back
+  }
+
+
+});
+
+document.getElementById('customButton').addEventListener('click', function(e) {
+  // Open Checkout with further options:
+  handler.open({
+    name: 'Masjid Muhajireen',
+    description: 'Fi sabilillah',
+    zipCode: true,
+    amount: 2000,
+  });
+  e.preventDefault();
+});
+  // $.post('/pay', {"handler": handler, "X-CSRFToken" : {% csrf_token %}})
+
+// Close Checkout on page navigation:
+window.addEventListener('popstate', function() {
+  handler.close();
+});
 </script>
 </body>
 </html>
