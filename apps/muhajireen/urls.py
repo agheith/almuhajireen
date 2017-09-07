@@ -9,8 +9,9 @@ urlpatterns = [
     url(r'^pay$', views.pay),
 
     url(r'^faq$', views.faq),
-    url(r'^vistus$', views.vistus),
-    url(r'^sermons$', views.sermons),
+    url(r'^visitus$', views.visitus),
+    url(r'^about$', views.about),
+    url(r'^khutbas$', views.khutbas),
     url(r'^programs$', views.programs),
     url(r'^sundayschool$', views.sundayschool),
     url(r'^contact$', views.contact),

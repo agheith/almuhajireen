@@ -29,13 +29,16 @@ def pay(request):
 
 # we need to edit the following pages SA>
 def faq(request):
+    return render(request, 'muhajireen/faq.html')
+
+def visitus(request):
+    return render(request, 'muhajireen/visitus.html')
+
+def about(request):
     return render(request, 'muhajireen/about.html')
 
-def vistus(request):
-    return render(request, 'muhajireen/about.html')
-
-def sermons(request):
-    return render(request, 'muhajireen/sermons.html')
+def khutbas(request):
+    return render(request, 'muhajireen/khutbas.html')
 
 def programs(request):
     return render(request, 'muhajireen/event.html')
