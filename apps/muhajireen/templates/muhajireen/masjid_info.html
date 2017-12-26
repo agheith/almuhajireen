@@ -42,49 +42,7 @@
         </div>
       </div>
       <!-- end preloader -->
-      <!--  navigation -->
-      <div class="nav-bar navbar-fixed-top">
-        <div class="container">
-          <div class="row">
-            <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12">
-              <div class="logo">
-                <a href="index.html"><img src="images/logo.png" alt="logo"></a>
-              </div>
-            </div>
-                <!-- <a href="https://www.facebook.com/masjidmuhajireen" target="_blank" class="facebook marginup"><i class="fa fa-facebook"></i></a> -->
-                <!-- <a href="https://www.youtube.com/channel/UCrwB_jiiYOXwrlNRfgEWA1w" target="_blank" class="youtube marginup"><i class="fa fa-youtube"></i></a> -->
-                <!-- <a href="https://plus.google.com/103987408569147251579" target="_blank" class="google-plus marginup"><i class="fa fa-google-plus"></i></a> -->
-              <!-- <div class="logo marginup">
-                <a href="#"><img src="{% static 'muhajireen/images/muhajir_logo.png' %}" alt="logo"></a>
-              </div>
-            </div> -->
-            <div class="col-lg-9 col-md-9 col-sm-12 col-xs-12">
-              <div class="navigation-menu">
-                <div id="cssmenu">
-                  <ul>
-                    <li><a href="/">Home</a></li>
-                    <li><a href="/about">About us</a>
-                      <ul>
-                        <li><a href="/masjid_info">Masjid Information</a></li>
-                        <li><a href="/faq">FAQs- Questions</a></li>
-                        <li><a href="/vistus">Visit Us</a></li>
-                      </ul>
-                    </li>
-                    <!-- <li><a href="#">Visit Us</a></li> -->
-                    <li><a href="/khutbas">Khutbas</a></li>
-                    <li><a href="/programs">Programs</a></li>
-                    <li><a href="/sundayschool">School</a>
-                    </li>
-                    <li><a href="/contact">Contact Us</a></li>
-                    <li class="donate-btn"><a href="/donate" class="btn btn-default">Donate</a></li>
-                  </ul>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    <!--  end navigation -->
+      {% include "muhajireen/nav.html" %}
 
         <!--  Page Banner -->
           <header id="page-banner" class="banner-main-block">
@@ -192,15 +150,8 @@
           </section>
         <!--  end about two -->
 
-        <div class="row">
-          <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 footer-dtl text-center">
-            <p>Copyright &copy; 2017 <a href="/">Masjid Muhajireen</p>
-          </div>
-        </div>
-      </div>
-    </div>
-  </footer>
-<!-- end footer -->
+{% include "muhajireen/footer.html" %}
+
 
 <!-- jquery -->
 <!-- jquery library js -->
