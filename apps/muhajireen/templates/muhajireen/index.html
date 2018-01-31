@@ -36,11 +36,11 @@
     </head>
     <body>
         <!-- preloader -->
-          <div class="preloader">
+          <!-- <div class="preloader">
             <div class="status">
               <div class="status-message">
               </div>
-            </div>
+            </div> -->
           </div>
           <!-- end preloader -->
       {% include "muhajireen/nav.html" %}
@@ -54,20 +54,143 @@
           </div>
         <!--end search -->
 
+        <div class="chalkboard p-3" style="background-image: url('{% static "muhajireen/images/website_background.jpg" %}'); height: 350px; padding-top: 50px;">
+          <div class="container">
+            <div class="row">
+              <div class="col-md-4 col-lg-2">
+                <div class="card card-inverse card-prayer p-3 mb-1 text-center">
+                  <blockquote class="card-blockquote">
+                    <h5>FAJR</h5>
+                    <h3>6:30 AM</h3>
+                    <footer>
+                      <small id="fajr_time"></small>
+                    </footer>
+                  </blockquote>
+                </div>
+
+                <div class="card card-inverse card-prayer p-3 mb-1 text-center">
+                  <blockquote class="card-blockquote">
+                    <h5>DHUHR</h5>
+                    <h3>1:30 PM</h3>
+                    <footer>
+                      <small id="dhuhr_time"></small>
+                    </footer>
+                  </blockquote>
+                </div>
+              </div>
+            <div class="col-md-4 col-lg-2">
+              <div class="card card-inverse card-prayer p-3 mb-1 text-center">
+                <blockquote class="card-blockquote">
+                  <h5>ASR</h5>
+                  <h3>3:45 PM</h3>
+                  <footer>
+                    <small id="asr_time"></small>
+                  </footer>
+                </blockquote>
+              </div>
+
+              <div class="card card-inverse card-prayer p-3 mb-1 text-center">
+                <blockquote class="card-blockquote">
+                  <h5>MAGHRIB</h5>
+                  <h3 id="maghrib_time"></h3>
+                  <footer>
+                    <small>Sunset</small>
+                  </footer>
+                </blockquote>
+              </div>
+            </div>
+            <div class="col-md-4 col-lg-2">
+              <div class="card card-inverse card-prayer p-3 mb-1 text-center">
+                <blockquote class="card-blockquote">
+                  <h5>ISHA</h5>
+                  <h3>8:00 PM</h3>
+                  <footer>
+                    <small id="isha_time"></small>
+                  </footer>
+                </blockquote>
+              </div>
+              <div class="card card-inverse card-prayer p-3 mb-1 text-center" style="height: 126px; overflow: auto;">
+                <blockquote class="card-blockquote">
+                  <footer>
+                    <small style="color: #4f7d70;text-transform: capitalize;text-align: left;">
+                      <div>On Monday, January 15; Dhuhr will change to 1:00, Asr will change to 4:00.</div>
+                    </small>
+                  </footer>
+                </blockquote>
+              </div>
+            </div>
+            <div class="col-md-4 col-lg-3">
+              <div class="card card-inverse card-prayer p-3 mb-1 text-center">
+                <blockquote class="card-blockquote">
+                  <h5 title="Masjid al-Mustafa (Harris Way) Jumuah" data-toggle="tooltip" data-placement="bottom"  >MaM JUMUAH</h5>
+                  <h3>12:15 PM</h3>
+                  <footer>
+                    <small style="color:#4f7d70">
+                          Imam Name
+                    </small>
+                  </footer>
+                </blockquote>
+              </div>
+
+                <div class="card card-inverse card-prayer p-3 mb-1 text-center">
+                  <blockquote class="card-blockquote">
+                      <h5 title="Downtown Jumuah" data-toggle="tooltip" data-placement="bottom"  >DT JUMUAH</h5>
+                      <h3>12:15 PM</h3>
+                      <footer>
+					              <small style="color:#4f7d70">
+                              By: Shiekh Name
+                        </small>
+                      </footer>
+                  </blockquote>
+                </div>
+            </div>
+            <div class="col-md-8 col-lg-3">
+              <div class="card card-inverse card-danger card-donate p-3 mb-1 text-center">
+                <h1 style="font-family: 'Source Sans Pro', sans-serif;"><i>donate</i></h1>
+                <h5 class="donation-text">
+                  Enter Donation Amount
+                </h5>
+                <!-- regular donations form -->
+
+                <form action="/pay" method="POST">
+                    {% csrf_token %}
+                    <input type="number" name="amount" id="custom-donation" placeholder="Amount" min="1.00" step="10.00 " style="margin:10px; color:black"/>
+                    <script
+                     src="https://checkout.stripe.com/checkout.js"
+                     class="stripe-button"
+                     data-key="pk_test_Klm4pdAv1nKmUPfI6IHIAZEY"
+                     data-name="Masjid Muhajireen"
+                     data-image="{% static 'muhajireen/images/muhajir_logo.png' %}"
+                     data-label="DONATE"
+                     data-zip-code="true"
+                     data-allow-remember-me="false"
+                     data-panel-label="Donate"
+                     data-amount= required
+                     data-locale="auto">
+                    </script>
+                </form>
+
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+
         <!--  slider -->
-          <header id="home-slider" class="slider-main-block">
+          <!-- <header id="home-slider" class="slider-main-block">
             <div class="item home-slider-img" style="background-image: url('{% static "muhajireen/images/slider1.png" %}');">
               <div class="overlay-bg"></div>
               <div class="container">
                 <div class="slider-dtl">
                   <h1 class="slider-heading">Support Masjid Muhajireen</h1>
                   <h5 class="slider-subheading">"In fact, the mosques of Allah are built up only by those who believe in Allah and the Last Day and those who establish prayer and pay zakah and who fear none but Allah. So, it is in all likelihood that they are to be among those on the right path." (Al-Qur'an 9:17-18)</h5>
-                  <div class="slider-btn">
+                  <div class="slider-btn"> -->
                     <!-- <span class="about-more-btn"><a href="#" class="btn btn-inverse">About More</a></span> -->
-                    <span class="slider-donate-btn"><a href="/" class="btn btn-default">Donate</a></span>
-                  </div>
+                    <!-- <span class="slider-donate-btn"><a href="/" class="btn btn-default">Donate</a></span>
+                  </div> -->
                   <!-- <img src="{% static 'muhajireen/images/ramadan17.png' %}"  alt="logo"> -->
-                </div>
+                <!-- </div>
               </div>
             </div>
             <div class="item home-slider-img" style="background-image: url('{% static "muhajireen/images/slider2b.png" %}');">
@@ -88,20 +211,20 @@
               <div class="container">
                 <div class="slider-dtl">
                   <h1 class="slider-heading">Mosque of Muhajireen</h1>
-                  <h5 class="slider-subheading">Masjid Muhajireen welcomes visitors at all times in order foster a culture of tolerance and understanding in the San Francisco Bay Area. The prayer times (shown on the frontpage) in particular, are excellent times to visit the center in order to meet local Muslims and observe Muslim's worship.</h5>
+                  <h5 class="slider-subheading">Masjid Muhajireen welcomes visitors at all times in order foster a culture of tolerance and understanding in the San Francisco Bay Area. The prayer times (shown on the frontpage) in particular, are excellent times to visit the center in order to meet local Muslims and observe Muslim's worship.</h5> -->
                   <!-- <span class="about-more-btn"><a href="#" class="btn btn-inverse">About More</a></span>
                   <span class="slider-donate-btn"><a href="#" class="btn btn-default">Donate</a></span> -->
-                  <div class="slider-btn">
+                  <!-- <div class="slider-btn">
                   </div>
                 </div>
               </div>
             </div>
-          </header>
+          </header> -->
         <!--  end slider -->
         <!--  about  -->
 
         <!-- Prayer time -->
-        <section id="event-counter" class="event-counter-main-block">
+        <!-- <section id="event-counter" class="event-counter-main-block">
           <div class="container-fluid">
             <div class="row row-full-spacing">
               <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
@@ -163,7 +286,7 @@
           </div>
           </div>
         </div>
-        </section>
+        </section> -->
         <!--  causes -->
           <section id="causes" class="causes-main-block">
             <div class="container">
@@ -250,6 +373,7 @@
         <!-- custom js -->
         <script type="text/javascript" src="{% static 'muhajireen/js/theme.js' %}"></script>
         <!-- end jquery -->
-
+        <script type="text/javascript" src="{% static 'muhajireen/js/prayTime.js' %}"></script>
+        <script type="text/javascript" src="{% static 'muhajireen/js/muhajireen.js' %}"></script>
     </body>
 </html>

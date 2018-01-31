@@ -5,3 +5,167 @@
 .buttondown{
     margin-top: 20px;
 }
+
+/*
+Theme Name: SBIA 2017
+Theme URI: http://sbia.info/
+Description: SBIA's custom theme.
+Version: 1
+Author: Muddsar Jamil
+*/
+
+@import url('https://fonts.googleapis.com/css?family=Roboto:400,400i,700,700i');
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:400,400i,700,800');
+
+
+body {
+    background-image: url('imgs/bg.png');
+    font-family: 'Roboto', sans-serif;
+
+}
+
+.preheader {
+    background-color: rgb(31, 47, 60);
+    color: #D89F11;
+}
+
+.navbar-brand   { color: #D89F11 !important;
+text-transform: uppercase
+
+}
+.navbar-brand img {
+    width: 150px;
+}
+
+ .bg-faded { background-color: rgba(255, 255, 255, 0.9);
+
+}
+.home-container {
+    background-color: rgba(255,255,255,.95) !important;
+}
+.page-container {
+    background-color: rgba(255,255,255,1) !important;
+
+}
+.navbar ul li a {
+     color: rgb(55, 58, 60) !important;
+     text-transform: uppercase;
+ }
+.navbar ul li a:hover { color: #D89F11 !important; }
+
+
+.chalkboard {
+    font-weight: bold;
+    text-transform: uppercase;
+    /*background-color: #4e4e50;*/
+    font-family: "Open Sans", sans-serif;
+    color: white;
+    overflow: hidden;
+    margin-top: 110px;
+}
+.card-header-prayer {
+    border-radius: 0; color: #333;
+    background-color: white;
+}
+.card-prayer {
+    background-color: #FFFFFF;
+    border-radius: 0;
+}
+.card-donate {
+  border-radius: 10px;
+  background-color: #FFFFFF;
+  height: 250px;
+}
+
+.card h5 {
+    color: #4f7d70;
+}
+
+.card footer small {
+    color: #4f7d70;
+}
+
+.donation-text{
+  padding: 20px;
+}
+
+.home_card {
+box-shadow: 0px 0px 15px 0px rgba(119, 119, 119, 0.51);
+    border: 0;
+    border-radius: 0;
+}
+.home-card-img-top {
+    width: 100%;
+    height:auto;
+  border-radius: 0;
+}
+
+.card-tag {
+    position: absolute;
+    top: 0;
+    right: 0;
+    background-color: rgba(0, 0,0,.5); color: white;
+    padding: 10px;
+    text-transform: uppercase;
+}
+
+.card-footer {
+    text-align: right;
+    background-color: #f1f6f8;
+
+}
+
+.subtitle {
+    padding: .75rem 1.25rem;
+    background-color: #f1f6f8;
+    margin-left: -1.25rem;     margin-right: -1.25rem;
+    font-size: 85%;
+    color: #D89F11;
+    text-align: right;
+}
+.subtitle a, .subtitle a:hover, .subtitle a:visited {
+    color: #D89F11;
+    text-decoration: underline;
+}
+
+.footer {
+    background-color: rgba(0,0,0,.80) !important;
+    color: #EBEBEB;
+    font-size: 85%;
+
+}
+
+/* The featured video player adds a little play triangel that's unnecessary */
+.fvp-onload {display: none;}
+.fvp-responsive iframe { width: 100% !important;}
+
+
+/** This is to set the home's card columns to 2 column layout when using medium sized devices (ipad) **/
+
+@media (min-width: 768px) {
+.card-columns {
+    column-count: 2;
+  }
+
+}
+
+@media (min-width: 992px) {
+.card-columns {
+    column-count: 3;
+  }
+}
+
+
+/* Navbar fix *
+https://github.com/twbs/bootstrap/issues/21590
+ */
+@media (max-width: 576px) {
+    nav > .container {
+        margin-left: 0;
+        margin-right: 0;
+    }
+
+  .card-columns {
+    column-count: 1;
+  }
+}
