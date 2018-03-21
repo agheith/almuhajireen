@@ -1,0 +1,390 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>Immigrants Association of Hayward</title>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <meta name="author" content="wp-organic" />
+    <meta name="MobileOptimized" content="320" />
+    {% load staticfiles %}
+    <!-- favicon-icon -->
+    <link rel="icon" type="image/icon" href="{% static 'images/favicon/favicon.ico' %}">
+    <!-- bootstrap css -->
+    <link href="{% static 'muhajireen/css/bootstrap.min.css' %}" rel="stylesheet" type="text/css"/>
+    <!-- fontawesome css -->
+    <link href="{% static 'muhajireen/css/font-awesome.min.css' %}" rel="stylesheet" type="text/css"/>
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+    <!-- flat icons css -->
+    <link href="{% static 'muhajireen/css/flaticon.css' %}" rel="stylesheet" type="text/css"/>
+    <!-- google font -->
+    <link href="https://fonts.googleapis.com/css?family=Playfair+Display:400,400i,700,900|Source+Sans+Pro:300,400,600,700" rel="stylesheet">
+    <!-- menu css -->
+    <link href="{% static 'muhajireen/css/menumaker.css' %}" rel="stylesheet" type="text/css"/>
+    <!-- owl carousel css -->
+    <link href="{% static 'muhajireen/css/owl.carousel.css' %}" rel="stylesheet" type="text/css"/>
+    <!-- magnify popup css -->
+    <link href="{% static 'muhajireen/css/magnific-popup.css' %}" rel="stylesheet" type="text/css"/>
+    <!-- datepicker css -->
+    <link href="{% static 'muhajireen/css/datepicker.css' %}" rel="stylesheet" type="text/css"/>
+    <!-- custom css -->
+    <link href="{% static 'muhajireen/css/style.css' %}" rel="stylesheet"/>
+    <link href="{% static 'muhajireen/css/custom.css' %}" rel="stylesheet"/>
+
+</head>
+<body>
+    <!-- preloader -->
+      <!-- <div class="preloader">
+        <div class="status">
+          <div class="status-message">
+          </div>
+        </div>
+      </div> -->
+      <!-- end preloader -->
+      <!--  navigation -->
+      <div class="nav-bar navbar-fixed-top">
+        <div class="container">
+          <div class="row">
+            <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12">
+              <div class="logo">
+                <a href="index.html"><img src="images/logo.png" alt="logo"></a>
+              </div>
+            </div>
+                <!-- <a href="https://www.facebook.com/masjidmuhajireen" target="_blank" class="facebook marginup"><i class="fa fa-facebook"></i></a> -->
+                <!-- <a href="https://www.youtube.com/channel/UCrwB_jiiYOXwrlNRfgEWA1w" target="_blank" class="youtube marginup"><i class="fa fa-youtube"></i></a> -->
+                <!-- <a href="https://plus.google.com/103987408569147251579" target="_blank" class="google-plus marginup"><i class="fa fa-google-plus"></i></a> -->
+              <!-- <div class="logo marginup">
+                <a href="#"><img src="{% static 'muhajireen/images/muhajir_logo.png' %}" alt="logo"></a>
+              </div>
+            </div> -->
+            <div class="col-lg-9 col-md-9 col-sm-12 col-xs-12">
+              <div class="navigation-menu">
+                <div id="cssmenu">
+                  <ul>
+                    <li><a href="/">Home</a></li>
+                    <li><a href="/about">About us</a>
+                      <ul>
+                        <li><a href="/masjid_info">Masjid Information</a></li>
+                        <li><a href="/faq">FAQs- Questions</a></li>
+                        <li><a href="/vistus">Visit Us</a></li>
+                      </ul>
+                    </li>
+                    <!-- <li><a href="#">Visit Us</a></li> -->
+                    <li><a href="/khutbas">Khutbas</a></li>
+                    <li><a href="/programs">Programs</a></li>
+                    <li><a href="/sundayschool">School</a>
+                    </li>
+                    <li><a href="/contact">Contact Us</a></li>
+                    <li class="donate-btn"><a href="/donate" class="btn btn-default">Donate</a></li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    <!--  end navigation -->
+<!-- search -->
+  <div class="search">
+    <div class="container clearfix">
+      <input type="search" class="search-box" placeholder="Type anything here...."/>
+      <a href="#" class="fa fa-times search-close"></a>
+    </div>
+  </div>
+<!-- end search -->
+<!--  page banner -->
+  <header id="page-banner" class="banner-main-block">
+    <div class="banner-img" style="background-image: url('/static/muhajireen/images/top-banner.jpg')">
+      <div class="overlay-bg"></div>
+      <div class="container">
+        <div class="banner-block">
+          <h3 class="section-heading">Support Masjid Muhajireen</h3>
+          <!-- <ol class="breadcrumb">
+            <li><a href="index.html">Home</a></li>
+            <li class="active"><a>Donation</a></li>
+          </ol> -->
+        </div>
+      </div>
+    </div>
+  </header>
+
+<!--  end page banner  -->
+
+  <section id="donation-dtl-block" class="donation-dtl-block">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+          <div class="donation-dtl-blockOne">
+            <div class="donation-dtl-img">
+              <img src="{% static 'muhajireen/images/donation_masjid.png' %}" class="img-responsive" alt="causes-img-1">
+            </div>
+
+            <!-- <div class="price-filter">
+              <div class="price-slider-amount">
+                <span>Raised</span><input type="text" id="amount" name="price" placeholder="Add Your Price">
+              </div>
+              <div id="slider-range" class=" ui-slider ui-slider-horizontal ui-widget ui-widget-content ui-corner-all slider-range">
+                <div class="ui-slider-range ui-widget-header ui-corner-all">
+                </div>
+                <span class="ui-slider-handle ui-state-default ui-corner-all"></span>
+                <span class="ui-slider-handle ui-state-default ui-corner-all"></span>
+              </div>
+            </div> -->
+          <!-- <a href="/do_donation" class="btn btn-default donation-dtl-block-btn buttondown">Donate</a> -->
+
+          <!-- <button type="button" id="customButton" class="btn btn-default donation-dtl-block-btn buttondown" name="button">Donate Now</button> -->
+
+
+           <!-- data-toggle="modal" data-target="#donationModal" -->
+
+          </div>
+          <div class="donation-amount" style="padding:50px 50px; margin-top:30px; border: 2px solid #B40565; border-radius: 50px;">
+
+            <!-- <button type="button" class="btn btn-default donation-dtl-block-btn" data-toggle="modal" data-target="#donationModal">Donate</button> -->
+
+                <form action="/pay" method="POST" style="display:inline; margin-right:20px; margin-left:100px;">
+
+                    <input type="hidden" name="amount" value="1"></input>
+                    {% csrf_token %}
+                    <script
+                      src="https://checkout.stripe.com/checkout.js" class="stripe-button"
+                      data-key="pk_test_Klm4pdAv1nKmUPfI6IHIAZEY"
+                      data-amount="100"
+                      data-name="Masjid Muhajireen"
+                      data-label="Donate $1.00"
+                      data-panel-label="Donate"
+                      data-zip-code="true"
+                      data-image="{% static 'muhajireen/images/muhajir_logo.png' %}"
+                      data-allow-remember-me="false"
+                      data-locale="auto">
+                    </script>
+
+                </form>
+
+
+                <form action="/pay" method="POST" style="display:inline; margin-right:20px;">
+
+                    <input type="hidden" name="amount" value="5"></input>
+                    {% csrf_token %}
+                    <script
+                      src="https://checkout.stripe.com/checkout.js" class="stripe-button"
+                      data-key="pk_test_Klm4pdAv1nKmUPfI6IHIAZEY"
+                      data-amount="500"
+                      data-name="Masjid Muhajireen"
+                      data-label="Donate $5.00"
+                      data-panel-label="Donate"
+                      data-zip-code="true"
+                      data-image="{% static 'muhajireen/images/muhajir_logo.png' %}"
+                      data-allow-remember-me="false"
+                      data-locale="auto">
+                    </script>
+
+                </form>
+
+
+                <form action="/pay" method="POST" style="display:inline; margin-right:20px;">
+
+                    <input type="hidden" name="amount" value="10"></input>
+                    {% csrf_token %}
+                    <script
+                      src="https://checkout.stripe.com/checkout.js" class="stripe-button"
+                      data-key="pk_test_Klm4pdAv1nKmUPfI6IHIAZEY"
+                      data-amount="1000"
+                      data-name="Masjid Muhajireen"
+                      data-label="Donate $10.00"
+                      data-panel-label="Donate"
+                      data-zip-code="true"
+                      data-image="{% static 'muhajireen/images/muhajir_logo.png' %}"
+                      data-allow-remember-me="false"
+                      data-locale="auto">
+                    </script>
+
+                </form>
+
+                <form action="/pay" method="POST" style="display:inline; margin-right:20px;">
+
+                    <input type="hidden" name="amount" value="20"></input>
+                    {% csrf_token %}
+                    <script
+                      src="https://checkout.stripe.com/checkout.js" class="stripe-button"
+                      data-key="pk_test_Klm4pdAv1nKmUPfI6IHIAZEY"
+                      data-amount="2000"
+                      data-name="Masjid Muhajireen"
+                      data-label="Donate $20.00"
+                      data-panel-label="Donate"
+                      data-zip-code="true"
+                      data-image="{% static 'muhajireen/images/muhajir_logo.png' %}"
+                      data-allow-remember-me="false"
+                      data-locale="auto">
+                    </script>
+
+                </form>
+
+                <form action="/pay" method="POST" style="display:inline; margin-right:20px;">
+
+                    <input type="hidden" name="amount" value="50"></input>
+                    {% csrf_token %}
+                    <script
+                      src="https://checkout.stripe.com/checkout.js" class="stripe-button"
+                      data-key="pk_test_Klm4pdAv1nKmUPfI6IHIAZEY"
+                      data-amount="5000"
+                      data-name="Masjid Muhajireen"
+                      data-label="Donate $50.00"
+                      data-panel-label="Donate"
+                      data-zip-code="true"
+                      data-image="{% static 'muhajireen/images/muhajir_logo.png' %}"
+                      data-allow-remember-me="false"
+                      data-locale="auto">
+                    </script>
+
+                </form>
+
+
+                <form action="/pay" method="POST" style="display:inline; margin-right:20px;">
+
+                    <input type="hidden" name="amount" value="100"></input>
+                    {% csrf_token %}
+                    <script
+                      src="https://checkout.stripe.com/checkout.js" class="stripe-button"
+                      data-key="pk_test_Klm4pdAv1nKmUPfI6IHIAZEY"
+                      data-amount="10000"
+                      data-name="Masjid Muhajireen"
+                      data-label="Donate $100.00"
+                      data-panel-label="Donate"
+                      data-zip-code="true"
+                      data-image="{% static 'muhajireen/images/muhajir_logo.png' %}"
+                      data-allow-remember-me="false"
+                      data-locale="auto">
+                    </script>
+
+                </form>
+
+
+
+                <form action="/pay" method="POST" style="display:block; margin:20px 0 0 300px;">
+                    {% csrf_token %}
+                    <label for="donation">Enter Donation Amount</label>
+                    <input required type="number" name="amount" id="custom-donation" placeholder="" min="1.00" step="10.00 "/>
+                    <script
+                     src="https://checkout.stripe.com/checkout.js"
+                     class="stripe-button"
+                     data-key="pk_test_Klm4pdAv1nKmUPfI6IHIAZEY"
+                     data-name="Masjid Muhajireen"
+                     data-image="{% static 'muhajireen/images/muhajir_logo.png' %}"
+                     data-label="DONATE"
+                     data-zip-code="true"
+                     data-allow-remember-me="false"
+                     data-panel-label="Donate"
+                     data-amount= required
+                     data-locale="auto">
+                    </script>
+
+                </form>
+
+
+          </div>
+
+          <div class="donation-modal-block">
+            <div id="donationModal" class="modal fade donation-modal" tabindex="-1" role="dialog" aria-labelledby="myModalHeading" aria-hidden="true">
+              <div class="modal-dialog">
+
+
+              </div>
+            </div>
+          </div>
+          <!-- bootstrap modal ends here -->
+
+          <div class="donation-dtl-blockTwo">
+              <h4 class="donation-heading">Masjid Muhajireen is a community-based, independent non-profit organization funded by contributions from members of our community. We rely on the generosity of donors like you to operate on a daily basis.</h4>
+            <h5 class="donation-heading">Make an online donation or mail your check payable to "Islamic Association of Immigrants" to: <strong>185 Folsom Avenue, Hayward, CA 94544</strong></h5>
+            <p>Ibn Maajah (242) narrated that Abu Hurayrah said: “The good deeds that will reach a believer after his death are: knowledge which he learned and then spread; a righteous son whom he leaves behind; a copy of the Qur’aan that he leaves as a legacy; a masjid that he built; a house that he built for wayfarers; a canal that he dug; or charity that he gave during his lifetime when he was in good health. These deeds will reach him after his death.” </p>
+            <p>"In fact, the mosques of Allah are built up only by those who believe in Allah and the Last Day and those who establish prayer and pay zakah and who fear none but Allah. So, it is in all likelihood that they are to be among those on the right path." (Al-Qur'an 9:17-18)</p>
+            <h4 class="news-heading">Donation Receipt</h4>
+            <p>Masjid Muhajireen is an IRS-approved charitable organization under Section 501 (c)(3) of the Internal Revenue Code. Your gift is deductible to the fullest extent allowed by the IRS under Tax ID#94-3138880. Gifts to Masjid Muhajireen are deductible when included among your itemized deductions on your federal income tax return. Masjid Muhajireen will mail you a gift receipt after you make your donation. Please contact us if you have not received your receipt.</p>
+
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+<!--  end donation bg -->
+
+{% include "muhajireen/footer.html" %}
+
+
+
+<!-- jquery -->
+<!-- jquery library js -->
+<script type="text/javascript" src="{% static 'muhajireen/js/jquery.min.js' %}"></script>
+<!-- bootstrap js -->
+<script type="text/javascript" src="{% static 'muhajireen/js/bootstrap.min.js' %}"></script>
+ <!-- owl carousel js -->
+<script type="text/javascript" src="{% static 'muhajireen/js/owl.carousel.js' %}"></script>
+<!-- mail chimp js -->
+<script type="text/javascript" src="{% static 'muhajireen/js/jquery.ajaxchimp.js' %}"></script>
+<!-- smooth scroll js -->
+<script type="text/javascript" src="{% static 'muhajireen/js/smooth-scroll.js' %}"></script>
+<!-- magnify popup js-->
+<script type="text/javascript" src="{% static 'muhajireen/js/jquery.magnific-popup.min.js' %}"></script>
+<!-- menu js-->
+<script type="text/javascript" src="{% static 'muhajireen/js/menumaker.js' %}"></script>
+<!-- price slider js -->
+<script type="text/javascript" src="{% static 'muhajireen/js/price-slider.js' %}"></script>
+ <!-- event countdown js -->
+<script type="text/javascript" src="{% static 'muhajireen/js/jquery.countdown.js' %}"></script>
+<!-- theme js -->
+<script type="text/javascript" src="{% static 'muhajireen/js/theme.js' %}"></script>
+<!-- end jquery -->
+
+<!-- jQuery to read the custom donation value -->
+<script type="text/javascript" src="{% static 'muhajireen/js/donate.js' %}"></script>
+
+<script type="text/javascript" src="https://js.stripe.com/v2/"></script>
+<!-- strip sdk -->
+<script type="text/javascript" src="{% static 'muhajireen/js/custom.js' %}"></script>
+<!-- stripe jquery code to fetch the form -->
+</script>
+<script src="https://checkout.stripe.com/checkout.js"></script>
+
+
+<script>
+var handler = StripeCheckout.configure({
+  key: 'pk_test_6pRNASCoBOKtIshFeQd4XMUh',
+  image: 'https://stripe.com/img/documentation/checkout/marketplace.png', // TODO: masjid log
+  locale: 'auto',
+
+  token: function(token) {
+    console.log("this is the token id ", token.id);
+    console.log("this is the token email", token.email);
+    console.log("you just pressed button");
+    // You can access the token ID with `token.id`.
+    // Get the token ID to your server-side code for use
+    console.log(handler);
+    // $.post('/pay', {"handler": handler})
+
+    // send all the stuff to back
+  }
+
+
+});
+
+document.getElementById('customButton').addEventListener('click', function(e) {
+  // Open Checkout with further options:
+  handler.open({
+    name: 'Masjid Muhajireen',
+    description: 'Fi sabilillah',
+    zipCode: true,
+    amount: 2000,
+  });
+  e.preventDefault();
+});
+  // $.post('/pay', {"handler": handler, "X-CSRFToken" : {% csrf_token %}})
+
+// Close Checkout on page navigation:
+window.addEventListener('popstate', function() {
+  handler.close();
+});
+</script>
+</body>
+</html>
